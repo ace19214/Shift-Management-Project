@@ -12,7 +12,6 @@ import shift.management.util.DateUtil;
 import shift.management.util.Message;
 
 import java.util.Date;
-import java.util.Optional;
 
 @Service
 public class UserServiceImp implements UserService {

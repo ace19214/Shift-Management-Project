@@ -3,6 +3,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.joda.time.DateTime;
 
 import javax.persistence.*;
 
@@ -29,4 +30,10 @@ public class UserShift {
     String status;
 
     float wages;
+
+    @Column(name = "start_work")
+    DateTime startWork;
+
+    @Column(name = "finish_work")
+    DateTime finishWork;
 }
