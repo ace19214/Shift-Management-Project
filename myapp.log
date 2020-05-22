@@ -54,3 +54,20 @@
 2020-05-22 16:58:33 INFO  UserServiceImp:45 - End service :createAccount
 2020-05-22 16:58:33 ERROR UserController:33 - org.springframework.dao.InvalidDataAccessResourceUsageException: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
 2020-05-22 16:58:33 INFO  UserController:36 - End controller :createAccount
+2020-05-22 19:00:20 INFO  UserController:28 - Begin controller :createAccount
+2020-05-22 19:00:20 INFO  UserServiceImp:28 - Begin service :createAccount
+2020-05-22 19:00:21 INFO  UserServiceImp:45 - End service :createAccount
+2020-05-22 19:00:21 ERROR UserController:33 - org.springframework.dao.InvalidDataAccessResourceUsageException: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+2020-05-22 19:00:21 INFO  UserController:36 - End controller :createAccount
+2020-05-22 19:17:44 INFO  UserController:28 - Begin controller :createAccount
+2020-05-22 19:17:44 INFO  UserServiceImp:28 - Begin service :createAccount
+2020-05-22 19:17:44 INFO  UserServiceImp:46 - End service :createAccount
+2020-05-22 19:17:44 INFO  UserController:36 - End controller :createAccount
+2020-05-22 19:32:01 INFO  UserController:40 - Begin controller :updateAccount
+2020-05-22 19:32:01 INFO  UserServiceImp:52 - Begin service :updateAccount
+2020-05-22 19:32:01 INFO  UserServiceImp:73 - End service :updateAccount
+2020-05-22 19:32:01 INFO  UserController:48 - End controller :updateAccount
+2020-05-22 19:33:56 INFO  UserController:40 - Begin controller :updateAccount
+2020-05-22 19:33:56 INFO  UserServiceImp:52 - Begin service :updateAccount
+2020-05-22 19:33:56 INFO  UserServiceImp:73 - End service :updateAccount
+2020-05-22 19:33:56 INFO  UserController:48 - End controller :updateAccount

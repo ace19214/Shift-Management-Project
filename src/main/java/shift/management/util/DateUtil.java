@@ -12,6 +12,11 @@ import java.util.Date;
 
 public class DateUtil {
 
+    public static java.sql.Date convertUtilToSql(java.util.Date uDate) {
+        java.sql.Date sDate = new java.sql.Date(uDate.getTime());
+        return sDate;
+    }
+
     public static DateTime getCurrentDateTime(){
         Instant instant = new Instant();
         Instant.now();

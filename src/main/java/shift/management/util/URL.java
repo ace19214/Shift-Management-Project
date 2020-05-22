@@ -7,5 +7,6 @@ public class URL {
     //account controller
      public static final String USER = "/user";
      public static final String CREATE_ACCOUNT = USER + "/create";
+     public static final String UPDATE_ACCOUNT = USER + "/update";
 
 }

@@ -26,6 +26,7 @@ public class JWTVerifier extends BasicAuthenticationFilter {
 
     public static String USERNAME = "";
 
+
     public JWTVerifier(AuthenticationManager authenticationManager){
         super(authenticationManager);
     }
@@ -57,7 +58,6 @@ public class JWTVerifier extends BasicAuthenticationFilter {
 
             if(username != null){
                 Collection<GrantedAuthority> authorities = Arrays.stream(getDecodedJWT(token).getClaim(AUTHORITIES_KEY).asString().split(",")).map(SimpleGrantedAuthority::new).collect(Collectors.toList());
-
                 return new UsernamePasswordAuthenticationToken(username, null, authorities);
             }
         }
