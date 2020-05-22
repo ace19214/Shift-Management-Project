@@ -1,0 +1,56 @@
+2020-05-22 13:14:47 DEBUG ShiftManagementApplication:31 - Starting Swagger
+2020-05-22 13:28:19 DEBUG ShiftManagementApplication:31 - Starting Swagger
+2020-05-22 15:26:24 DEBUG ShiftManagementApplication:31 - Starting Swagger
+2020-05-22 15:27:26 DEBUG ShiftManagementApplication:31 - Starting Swagger
+2020-05-22 15:28:21 DEBUG ShiftManagementApplication:31 - Starting Swagger
+2020-05-22 15:29:19 DEBUG ShiftManagementApplication:31 - Starting Swagger
+2020-05-22 15:34:16 DEBUG ShiftManagementApplication:31 - Starting Swagger
+2020-05-22 15:35:58 DEBUG ShiftManagementApplication:31 - Starting Swagger
+2020-05-22 15:59:16 DEBUG ShiftManagementApplication:31 - Starting Swagger
+2020-05-22 16:05:13 DEBUG ShiftManagementApplication:31 - Starting Swagger
+2020-05-22 16:08:03 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-05-22 16:37:03 INFO  UserController:28 - Begin controller :createAccount
+2020-05-22 16:37:03 INFO  UserServiceImp:26 - Begin service :createAccount
+2020-05-22 16:37:03 INFO  UserServiceImp:44 - End service :createAccount
+2020-05-22 16:37:03 ERROR UserController:33 - org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2020-05-22 16:37:03 INFO  UserController:36 - End controller :createAccount
+2020-05-22 16:38:40 INFO  UserController:28 - Begin controller :createAccount
+2020-05-22 16:38:40 INFO  UserServiceImp:26 - Begin service :createAccount
+2020-05-22 16:38:58 INFO  UserServiceImp:44 - End service :createAccount
+2020-05-22 16:38:58 ERROR UserController:33 - org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2020-05-22 16:38:58 INFO  UserController:36 - End controller :createAccount
+2020-05-22 16:42:09 INFO  UserController:28 - Begin controller :createAccount
+2020-05-22 16:42:09 INFO  UserServiceImp:26 - Begin service :createAccount
+2020-05-22 16:42:10 INFO  UserServiceImp:44 - End service :createAccount
+2020-05-22 16:42:10 ERROR UserController:33 - org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2020-05-22 16:42:10 INFO  UserController:36 - End controller :createAccount
+2020-05-22 16:43:09 INFO  UserController:28 - Begin controller :createAccount
+2020-05-22 16:43:09 INFO  UserServiceImp:26 - Begin service :createAccount
+2020-05-22 16:43:31 INFO  UserServiceImp:44 - End service :createAccount
+2020-05-22 16:43:31 ERROR UserController:33 - org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2020-05-22 16:43:31 INFO  UserController:36 - End controller :createAccount
+2020-05-22 16:45:01 INFO  UserController:28 - Begin controller :createAccount
+2020-05-22 16:45:01 INFO  UserServiceImp:26 - Begin service :createAccount
+2020-05-22 16:45:55 INFO  UserServiceImp:44 - End service :createAccount
+2020-05-22 16:45:55 ERROR UserController:33 - org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2020-05-22 16:45:55 INFO  UserController:36 - End controller :createAccount
+2020-05-22 16:49:17 INFO  UserController:28 - Begin controller :createAccount
+2020-05-22 16:49:17 INFO  UserServiceImp:26 - Begin service :createAccount
+2020-05-22 16:49:54 INFO  UserServiceImp:44 - End service :createAccount
+2020-05-22 16:49:54 ERROR UserController:33 - org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2020-05-22 16:49:54 INFO  UserController:36 - End controller :createAccount
+2020-05-22 16:50:51 INFO  UserController:28 - Begin controller :createAccount
+2020-05-22 16:50:51 INFO  UserServiceImp:27 - Begin service :createAccount
+2020-05-22 16:51:11 INFO  UserServiceImp:46 - End service :createAccount
+2020-05-22 16:51:11 ERROR UserController:33 - org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2020-05-22 16:51:11 INFO  UserController:36 - End controller :createAccount
+2020-05-22 16:56:21 INFO  UserController:28 - Begin controller :createAccount
+2020-05-22 16:56:21 INFO  UserServiceImp:27 - Begin service :createAccount
+2020-05-22 16:56:22 INFO  UserServiceImp:45 - End service :createAccount
+2020-05-22 16:56:22 ERROR UserController:33 - org.springframework.dao.InvalidDataAccessResourceUsageException: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+2020-05-22 16:56:22 INFO  UserController:36 - End controller :createAccount
+2020-05-22 16:58:04 INFO  UserController:28 - Begin controller :createAccount
+2020-05-22 16:58:04 INFO  UserServiceImp:27 - Begin service :createAccount
+2020-05-22 16:58:33 INFO  UserServiceImp:45 - End service :createAccount
+2020-05-22 16:58:33 ERROR UserController:33 - org.springframework.dao.InvalidDataAccessResourceUsageException: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+2020-05-22 16:58:33 INFO  UserController:36 - End controller :createAccount
