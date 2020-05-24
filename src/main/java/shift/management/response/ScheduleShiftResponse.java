@@ -4,7 +4,7 @@ import org.joda.time.DateTime;
 
 import java.util.Date;
 
-public class CreateShiftResponse {
+public class ScheduleShiftResponse {
     private int scheduleID;
     private int shiftID;
     private String date;
@@ -13,10 +13,10 @@ public class CreateShiftResponse {
     private String finish;
     private int slot;
 
-    public CreateShiftResponse() {
+    public ScheduleShiftResponse() {
     }
 
-    public CreateShiftResponse(int scheduleID, int shiftID, String date, float bonusRate, String start, String finish, int slot) {
+    public ScheduleShiftResponse(int scheduleID, int shiftID, String date, float bonusRate, String start, String finish, int slot) {
         this.scheduleID = scheduleID;
         this.shiftID = shiftID;
         this.date = date;

@@ -9,4 +9,6 @@ import java.sql.Date;
 @Repository
 public interface ScheduleRepository extends JpaRepository<Schedule, Integer> {
     Schedule findByDate(Date date);
+
+    Schedule findById(int id);
 }

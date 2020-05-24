@@ -217,3 +217,15 @@
 2020-05-24 11:01:02 INFO  ScheduleServiceImp:36 - End service :createSchedule
 2020-05-24 11:01:02 INFO  ShiftServiceImp:65 - End service :createShift
 2020-05-24 11:01:02 INFO  ShiftController:39 - End controller :createScheduleAndShift
+2020-05-24 16:48:05 INFO  ShiftController:44 - Begin controller :updateScheduleAndShift
+2020-05-24 16:48:05 INFO  ShiftServiceImp:68 - Begin service :updateShift
+2020-05-24 16:48:05 INFO  ScheduleServiceImp:42 - Begin service :updateSchedule
+2020-05-24 16:48:05 INFO  ScheduleServiceImp:53 - End service :updateSchedule
+2020-05-24 16:48:05 INFO  ShiftServiceImp:97 - End service :updateShift
+2020-05-24 16:48:05 INFO  ShiftController:52 - End controller :updateScheduleAndShift
+2020-05-24 16:48:25 INFO  ShiftController:44 - Begin controller :updateScheduleAndShift
+2020-05-24 16:48:25 INFO  ShiftServiceImp:68 - Begin service :updateShift
+2020-05-24 16:48:25 INFO  ScheduleServiceImp:42 - Begin service :updateSchedule
+2020-05-24 16:48:25 INFO  ScheduleServiceImp:53 - End service :updateSchedule
+2020-05-24 16:48:25 INFO  ShiftServiceImp:97 - End service :updateShift
+2020-05-24 16:48:25 INFO  ShiftController:52 - End controller :updateScheduleAndShift
