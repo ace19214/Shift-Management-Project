@@ -15,5 +15,6 @@ public class Constant {
     //Status
     public static final String ACTIVE = "ACTIVE";
     public static final String DISABLE = "DISABLE";
+    public static final String ENABLE = "ENABLE";
 
 }

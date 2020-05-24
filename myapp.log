@@ -229,3 +229,7 @@
 2020-05-24 16:48:25 INFO  ScheduleServiceImp:53 - End service :updateSchedule
 2020-05-24 16:48:25 INFO  ShiftServiceImp:97 - End service :updateShift
 2020-05-24 16:48:25 INFO  ShiftController:52 - End controller :updateScheduleAndShift
+2020-05-24 20:29:25 INFO  RegisterShiftController:26 - Begin controller :registerShift
+2020-05-24 20:29:25 INFO  RegisterShiftServiceImp:43 - Begin service :Register
+2020-05-24 20:29:26 INFO  RegisterShiftServiceImp:82 - End service :Register
+2020-05-24 20:29:26 INFO  RegisterShiftController:34 - End controller :registerShift
