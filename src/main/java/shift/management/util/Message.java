@@ -14,4 +14,5 @@ public class Message {
     public static final String MONEY_INVALID = "Money is invalid";
     public static final String ADMIN_NOT_EXIST = "Admin not exist";
     public static final String ROLE_INVALID = "Role invalid";
+    public static final String SCHEDULE_EXIST = "Schedule is exist";
 }

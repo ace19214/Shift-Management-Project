@@ -5,8 +5,11 @@ package shift.management.util;
 import org.joda.time.DateTime;
 import org.joda.time.Instant;
 import org.joda.time.LocalDateTime;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
 
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -15,6 +18,17 @@ public class DateUtil {
     public static java.sql.Date convertUtilToSql(java.util.Date uDate) {
         java.sql.Date sDate = new java.sql.Date(uDate.getTime());
         return sDate;
+    }
+
+    public static Date convertStringToDate(String date) throws ParseException {
+        Date date1=new SimpleDateFormat("dd/MM/yyyy").parse(date);
+        return date1;
+    }
+
+    public static DateTime convertStringToDateTime(String date) throws ParseException {
+        DateTimeFormatter formatter = DateTimeFormat.forPattern("dd-MM-yyyy HH:mm:ss");
+        DateTime dt = formatter.parseDateTime(date);
+        return dt;
     }
 
     public static DateTime getCurrentDateTime(){
@@ -59,6 +73,11 @@ public class DateUtil {
     }
 
     public static String DateFormatterTime(Date date){
+        DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+        String strDate = dateFormat.format(date);
+        return strDate;
+    }
+    public static String DateTimeFormatterTime(DateTime date){
         DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
         String strDate = dateFormat.format(date);
         return strDate;

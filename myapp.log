@@ -71,3 +71,149 @@
 2020-05-22 19:33:56 INFO  UserServiceImp:52 - Begin service :updateAccount
 2020-05-22 19:33:56 INFO  UserServiceImp:73 - End service :updateAccount
 2020-05-22 19:33:56 INFO  UserController:48 - End controller :updateAccount
+2020-05-23 15:33:17 INFO  ShiftController:31 - Begin controller :createScheduleAndShift
+2020-05-23 15:33:17 INFO  ShiftServiceImp:35 - Begin service :createShift
+2020-05-23 15:33:17 INFO  ShiftServiceImp:60 - End service :createShift
+2020-05-23 15:33:17 ERROR ShiftController:36 - java.lang.NullPointerException
+2020-05-23 15:33:17 INFO  ShiftController:39 - End controller :createScheduleAndShift
+2020-05-23 16:00:33 INFO  ShiftController:31 - Begin controller :createScheduleAndShift
+2020-05-23 16:00:33 INFO  ShiftServiceImp:35 - Begin service :createShift
+2020-05-23 16:01:22 INFO  ShiftServiceImp:62 - End service :createShift
+2020-05-23 16:01:22 ERROR ShiftController:36 - java.lang.NullPointerException
+2020-05-23 16:01:22 INFO  ShiftController:39 - End controller :createScheduleAndShift
+2020-05-23 16:07:35 INFO  ShiftController:31 - Begin controller :createScheduleAndShift
+2020-05-23 16:07:35 INFO  ShiftServiceImp:35 - Begin service :createShift
+2020-05-23 16:09:56 INFO  ShiftServiceImp:62 - End service :createShift
+2020-05-23 16:09:56 ERROR ShiftController:36 - java.lang.NullPointerException
+2020-05-23 16:09:56 INFO  ShiftController:39 - End controller :createScheduleAndShift
+2020-05-23 16:11:21 INFO  ShiftController:31 - Begin controller :createScheduleAndShift
+2020-05-23 16:11:21 INFO  ShiftServiceImp:35 - Begin service :createShift
+2020-05-23 16:11:33 INFO  ShiftServiceImp:62 - End service :createShift
+2020-05-23 16:11:33 ERROR ShiftController:36 - java.lang.NullPointerException
+2020-05-23 16:11:33 INFO  ShiftController:39 - End controller :createScheduleAndShift
+2020-05-23 16:13:38 INFO  ShiftController:31 - Begin controller :createScheduleAndShift
+2020-05-23 16:13:38 INFO  ShiftServiceImp:35 - Begin service :createShift
+2020-05-23 16:13:39 INFO  ShiftServiceImp:62 - End service :createShift
+2020-05-23 16:13:39 ERROR ShiftController:36 - java.lang.NullPointerException
+2020-05-23 16:13:39 INFO  ShiftController:39 - End controller :createScheduleAndShift
+2020-05-23 16:27:26 INFO  ShiftController:31 - Begin controller :createScheduleAndShift
+2020-05-23 16:27:26 INFO  ShiftServiceImp:35 - Begin service :createShift
+2020-05-23 16:28:07 INFO  ShiftServiceImp:62 - End service :createShift
+2020-05-23 16:28:12 ERROR ShiftController:36 - java.lang.NullPointerException
+2020-05-23 16:28:12 INFO  ShiftController:39 - End controller :createScheduleAndShift
+2020-05-23 16:31:37 INFO  ShiftController:31 - Begin controller :createScheduleAndShift
+2020-05-23 16:31:37 INFO  ShiftServiceImp:35 - Begin service :createShift
+2020-05-23 16:31:37 INFO  ShiftServiceImp:62 - End service :createShift
+2020-05-23 16:31:37 ERROR ShiftController:36 - java.lang.NullPointerException
+2020-05-23 16:31:37 INFO  ShiftController:39 - End controller :createScheduleAndShift
+2020-05-23 16:34:28 INFO  ShiftController:31 - Begin controller :createScheduleAndShift
+2020-05-23 16:34:28 INFO  ShiftServiceImp:35 - Begin service :createShift
+2020-05-23 16:35:07 INFO  ShiftServiceImp:62 - End service :createShift
+2020-05-23 16:35:07 ERROR ShiftController:36 - java.lang.NullPointerException
+2020-05-23 16:35:07 INFO  ShiftController:39 - End controller :createScheduleAndShift
+2020-05-23 16:36:14 INFO  ShiftController:31 - Begin controller :createScheduleAndShift
+2020-05-23 16:36:14 INFO  ShiftServiceImp:35 - Begin service :createShift
+2020-05-23 16:36:20 INFO  ShiftServiceImp:62 - End service :createShift
+2020-05-23 16:36:21 ERROR ShiftController:36 - java.lang.NullPointerException
+2020-05-23 16:36:21 INFO  ShiftController:39 - End controller :createScheduleAndShift
+2020-05-23 16:40:42 INFO  ShiftController:31 - Begin controller :createScheduleAndShift
+2020-05-23 16:40:42 INFO  ShiftServiceImp:35 - Begin service :createShift
+2020-05-23 16:40:42 INFO  ShiftServiceImp:62 - End service :createShift
+2020-05-23 16:40:42 ERROR ShiftController:36 - java.lang.NullPointerException
+2020-05-23 16:40:42 INFO  ShiftController:39 - End controller :createScheduleAndShift
+2020-05-23 17:04:10 INFO  ShiftController:31 - Begin controller :createScheduleAndShift
+2020-05-23 17:04:10 INFO  ShiftServiceImp:37 - Begin service :createShift
+2020-05-23 17:04:10 INFO  ScheduleServiceImp:26 - Begin service :createSchedule
+2020-05-23 17:04:11 INFO  ScheduleServiceImp:36 - End service :createSchedule
+2020-05-23 17:04:11 INFO  ShiftServiceImp:64 - End service :createShift
+2020-05-23 17:04:11 ERROR ShiftController:36 - java.lang.NullPointerException
+2020-05-23 17:04:11 INFO  ShiftController:39 - End controller :createScheduleAndShift
+2020-05-23 18:26:06 INFO  ShiftController:31 - Begin controller :createScheduleAndShift
+2020-05-23 18:26:06 INFO  ShiftServiceImp:37 - Begin service :createShift
+2020-05-23 18:26:06 INFO  ScheduleServiceImp:26 - Begin service :createSchedule
+2020-05-23 18:26:06 INFO  ScheduleServiceImp:36 - End service :createSchedule
+2020-05-23 18:26:06 INFO  ShiftServiceImp:64 - End service :createShift
+2020-05-23 18:26:06 ERROR ShiftController:36 - java.text.ParseException: Unparseable date: "2018-03-29"
+2020-05-23 18:26:06 INFO  ShiftController:39 - End controller :createScheduleAndShift
+2020-05-23 18:26:48 INFO  ShiftController:31 - Begin controller :createScheduleAndShift
+2020-05-23 18:26:48 INFO  ShiftServiceImp:37 - Begin service :createShift
+2020-05-23 18:26:48 INFO  ScheduleServiceImp:26 - Begin service :createSchedule
+2020-05-23 18:26:48 INFO  ScheduleServiceImp:36 - End service :createSchedule
+2020-05-23 18:26:48 INFO  ShiftServiceImp:64 - End service :createShift
+2020-05-23 18:26:48 ERROR ShiftController:36 - java.lang.Exception: Schedule is exist
+2020-05-23 18:26:48 INFO  ShiftController:39 - End controller :createScheduleAndShift
+2020-05-23 18:27:54 INFO  ShiftController:31 - Begin controller :createScheduleAndShift
+2020-05-23 18:27:54 INFO  ShiftServiceImp:37 - Begin service :createShift
+2020-05-23 18:27:54 INFO  ScheduleServiceImp:26 - Begin service :createSchedule
+2020-05-23 18:27:54 INFO  ScheduleServiceImp:36 - End service :createSchedule
+2020-05-23 18:27:54 INFO  ShiftServiceImp:64 - End service :createShift
+2020-05-23 18:27:54 ERROR ShiftController:36 - java.lang.IllegalArgumentException: Invalid format: "2018-03-29T13:34:00.000" is malformed at "18-03-29T13:34:00.000"
+2020-05-23 18:27:54 INFO  ShiftController:39 - End controller :createScheduleAndShift
+2020-05-24 10:07:25 INFO  ShiftController:31 - Begin controller :createScheduleAndShift
+2020-05-24 10:07:25 INFO  ShiftServiceImp:37 - Begin service :createShift
+2020-05-24 10:08:19 INFO  ScheduleServiceImp:26 - Begin service :createSchedule
+2020-05-24 10:09:08 INFO  ScheduleServiceImp:36 - End service :createSchedule
+2020-05-24 10:09:08 INFO  ShiftServiceImp:64 - End service :createShift
+2020-05-24 10:09:08 ERROR ShiftController:36 - java.lang.Exception: Schedule is exist
+2020-05-24 10:09:08 INFO  ShiftController:39 - End controller :createScheduleAndShift
+2020-05-24 10:09:57 INFO  ShiftController:31 - Begin controller :createScheduleAndShift
+2020-05-24 10:09:57 INFO  ShiftServiceImp:37 - Begin service :createShift
+2020-05-24 10:10:04 INFO  ScheduleServiceImp:26 - Begin service :createSchedule
+2020-05-24 10:10:07 INFO  ScheduleServiceImp:36 - End service :createSchedule
+2020-05-24 10:11:28 INFO  ShiftServiceImp:64 - End service :createShift
+2020-05-24 10:11:28 ERROR ShiftController:36 - java.lang.IllegalArgumentException: Invalid format: "2018-03-29T13:34:00.000" is malformed at "18-03-29T13:34:00.000"
+2020-05-24 10:11:28 INFO  ShiftController:39 - End controller :createScheduleAndShift
+2020-05-24 10:15:46 INFO  ShiftController:31 - Begin controller :createScheduleAndShift
+2020-05-24 10:15:46 INFO  ShiftServiceImp:37 - Begin service :createShift
+2020-05-24 10:15:59 INFO  ScheduleServiceImp:26 - Begin service :createSchedule
+2020-05-24 10:16:02 INFO  ScheduleServiceImp:36 - End service :createSchedule
+2020-05-24 10:18:27 INFO  ShiftServiceImp:64 - End service :createShift
+2020-05-24 10:18:27 ERROR ShiftController:36 - java.lang.Exception: Schedule is exist
+2020-05-24 10:18:27 INFO  ShiftController:39 - End controller :createScheduleAndShift
+2020-05-24 10:27:10 INFO  ShiftController:31 - Begin controller :createScheduleAndShift
+2020-05-24 10:27:10 INFO  ShiftServiceImp:37 - Begin service :createShift
+2020-05-24 10:27:13 INFO  ScheduleServiceImp:26 - Begin service :createSchedule
+2020-05-24 10:27:16 INFO  ScheduleServiceImp:36 - End service :createSchedule
+2020-05-24 10:27:22 INFO  ShiftServiceImp:64 - End service :createShift
+2020-05-24 10:27:34 ERROR ShiftController:36 - java.lang.IllegalArgumentException: Invalid format: "2020-05-23 10:00:00" is malformed at "20-05-23 10:00:00"
+2020-05-24 10:27:34 INFO  ShiftController:39 - End controller :createScheduleAndShift
+2020-05-24 10:30:04 INFO  ShiftController:31 - Begin controller :createScheduleAndShift
+2020-05-24 10:30:04 INFO  ShiftServiceImp:37 - Begin service :createShift
+2020-05-24 10:30:16 INFO  ScheduleServiceImp:26 - Begin service :createSchedule
+2020-05-24 10:30:18 INFO  ScheduleServiceImp:36 - End service :createSchedule
+2020-05-24 10:30:33 INFO  ShiftServiceImp:64 - End service :createShift
+2020-05-24 10:30:34 ERROR ShiftController:36 - org.springframework.dao.InvalidDataAccessResourceUsageException: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+2020-05-24 10:30:34 INFO  ShiftController:39 - End controller :createScheduleAndShift
+2020-05-24 10:37:34 INFO  ShiftController:31 - Begin controller :createScheduleAndShift
+2020-05-24 10:37:34 INFO  ShiftServiceImp:37 - Begin service :createShift
+2020-05-24 10:37:41 INFO  ScheduleServiceImp:26 - Begin service :createSchedule
+2020-05-24 10:37:43 INFO  ScheduleServiceImp:36 - End service :createSchedule
+2020-05-24 10:45:26 INFO  ShiftServiceImp:64 - End service :createShift
+2020-05-24 10:45:26 ERROR ShiftController:36 - java.lang.Exception: Schedule is exist
+2020-05-24 10:45:26 INFO  ShiftController:39 - End controller :createScheduleAndShift
+2020-05-24 10:51:21 INFO  ShiftController:31 - Begin controller :createScheduleAndShift
+2020-05-24 10:51:21 INFO  ShiftServiceImp:38 - Begin service :createShift
+2020-05-24 10:51:24 INFO  ScheduleServiceImp:26 - Begin service :createSchedule
+2020-05-24 10:51:26 INFO  ScheduleServiceImp:36 - End service :createSchedule
+2020-05-24 10:54:24 INFO  ShiftServiceImp:65 - End service :createShift
+2020-05-24 10:54:24 ERROR ShiftController:36 - java.lang.Exception: Schedule is exist
+2020-05-24 10:54:24 INFO  ShiftController:39 - End controller :createScheduleAndShift
+2020-05-24 10:55:00 INFO  ShiftController:31 - Begin controller :createScheduleAndShift
+2020-05-24 10:55:00 INFO  ShiftServiceImp:38 - Begin service :createShift
+2020-05-24 10:55:03 INFO  ScheduleServiceImp:26 - Begin service :createSchedule
+2020-05-24 10:55:05 INFO  ScheduleServiceImp:36 - End service :createSchedule
+2020-05-24 10:55:06 INFO  ShiftServiceImp:65 - End service :createShift
+2020-05-24 10:55:06 ERROR ShiftController:36 - java.lang.Exception: Schedule is exist
+2020-05-24 10:55:06 INFO  ShiftController:39 - End controller :createScheduleAndShift
+2020-05-24 10:56:52 INFO  ShiftController:31 - Begin controller :createScheduleAndShift
+2020-05-24 10:56:52 INFO  ShiftServiceImp:38 - Begin service :createShift
+2020-05-24 10:56:55 INFO  ScheduleServiceImp:26 - Begin service :createSchedule
+2020-05-24 10:56:59 INFO  ScheduleServiceImp:36 - End service :createSchedule
+2020-05-24 10:57:27 INFO  ShiftServiceImp:65 - End service :createShift
+2020-05-24 10:57:27 INFO  ShiftController:39 - End controller :createScheduleAndShift
+2020-05-24 11:01:01 INFO  ShiftController:31 - Begin controller :createScheduleAndShift
+2020-05-24 11:01:01 INFO  ShiftServiceImp:38 - Begin service :createShift
+2020-05-24 11:01:01 INFO  ScheduleServiceImp:26 - Begin service :createSchedule
+2020-05-24 11:01:02 INFO  ScheduleServiceImp:36 - End service :createSchedule
+2020-05-24 11:01:02 INFO  ShiftServiceImp:65 - End service :createShift
+2020-05-24 11:01:02 INFO  ShiftController:39 - End controller :createScheduleAndShift

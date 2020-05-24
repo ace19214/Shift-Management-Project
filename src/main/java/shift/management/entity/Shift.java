@@ -6,6 +6,7 @@ import lombok.Setter;
 import org.joda.time.DateTime;
 
 import javax.persistence.*;
+import java.sql.Time;
 
 @Entity
 @Table(name = "shift")
@@ -18,9 +19,9 @@ public class Shift {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
 
-    DateTime start;
+    Time start;
 
-    DateTime finish;
+    Time finish;
 
     int slot;
 
