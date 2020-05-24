@@ -12,5 +12,6 @@ public class URL {
      //shift controller
     public static final String SHIFT = "/shift";
     public static final String CREATE_SCHEDULE_SHIFT = SHIFT + "/create";
+    public static final String UPDATE_SCHEDULE_SHIFT = SHIFT + "/update";
 
 }

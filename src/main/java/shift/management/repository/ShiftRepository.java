@@ -9,4 +9,6 @@ import java.util.List;
 @Repository
 public interface ShiftRepository extends JpaRepository<Shift, Integer> {
     List<Shift> getAllShiftByScheduleID(int id);
+
+    Shift findById(int id);
 }

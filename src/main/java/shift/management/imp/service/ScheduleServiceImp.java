@@ -36,4 +36,21 @@ public class ScheduleServiceImp implements ScheduleService {
             logger.info(Constant.END_SERVICE + "createSchedule");
         }
     }
+
+    @Override
+    public Schedule updateSchedule(int id, float bonusRate) throws Exception {
+        logger.info(Constant.BEGIN_SERVICE + "updateSchedule");
+        try {
+            Schedule schedule = scheduleRepository.findById(id);
+            if(schedule == null){
+                throw new Exception(Message.SCHEDULE_NOT_EXIST);
+            }
+            schedule.setBonusRate(bonusRate);
+            scheduleRepository.save(schedule);
+
+            return schedule;
+        }finally {
+            logger.info(Constant.END_SERVICE + "updateSchedule");
+        }
+    }
 }
