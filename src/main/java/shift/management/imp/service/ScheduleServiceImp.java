@@ -12,6 +12,7 @@ import shift.management.util.DateUtil;
 import shift.management.util.Message;
 
 import java.util.Date;
+import java.util.List;
 
 @Service
 public class ScheduleServiceImp implements ScheduleService {
@@ -51,6 +52,16 @@ public class ScheduleServiceImp implements ScheduleService {
             return schedule;
         }finally {
             logger.info(Constant.END_SERVICE + "updateSchedule");
+        }
+    }
+
+    @Override
+    public List<Schedule> getListSchedule() throws Exception {
+        logger.info(Constant.BEGIN_SERVICE + "getListSchedule");
+        try {
+            return scheduleRepository.findAll();
+        }finally {
+            logger.info(Constant.END_SERVICE + "getListSchedule");
         }
     }
 }
