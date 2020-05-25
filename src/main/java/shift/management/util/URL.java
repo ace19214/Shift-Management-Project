@@ -25,4 +25,8 @@ public class URL {
     public static final String USER_SHIFT = "/shift-request";
     public static final String INSERT_APPROVE = USER_SHIFT + "/approve";
 
+    //schedule controller
+    public static final String SCHEDULE = "/schedule";
+    public static final String GET_LIST_SCHEDULE = SCHEDULE + "/list-schedule";
+
 }
