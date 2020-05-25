@@ -2,10 +2,9 @@ package shift.management.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import shift.management.entity.UserShift;
+import shift.management.entity.Salary;
 
 @Repository
-public interface UserShiftRepository extends JpaRepository<UserShift, Integer> {
+public interface SalaryRepository extends JpaRepository<Salary, Integer> {
 
-    int countByShiftID(int shiftID);
 }

@@ -11,10 +11,13 @@ public class Constant {
     //Role
     public static final String MANAGER = "MANAGER";
     public static final String STAFF = "STAFF";
+    public static final String BARTENDER = "BARTENDER";
 
     //Status
     public static final String ACTIVE = "ACTIVE";
     public static final String DISABLE = "DISABLE";
     public static final String ENABLE = "ENABLE";
+
+
 
 }
