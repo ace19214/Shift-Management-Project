@@ -52,4 +52,19 @@ public class ShiftController {
             logger.info(Constant.END_CONTROLLER + "updateScheduleAndShift");
         }
     }
+
+    //get list shift
+    @GetMapping(URL.GET_LIST_SHIFT)
+    public ResponseEntity getListShiftBySchedule (@RequestParam int scheduleID){
+        logger.info(Constant.BEGIN_CONTROLLER + "getListShiftBySchedule");
+        try {
+
+            return new ResponseEntity(shiftService.getListShiftBySchedule(scheduleID), HttpStatus.OK);
+        }catch (Exception ex){
+            logger.error(ex);
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+        }finally {
+            logger.info(Constant.END_CONTROLLER + "getListShiftBySchedule");
+        }
+    }
 }

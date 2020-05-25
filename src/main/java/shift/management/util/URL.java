@@ -13,6 +13,7 @@ public class URL {
     public static final String SHIFT = "/shift";
     public static final String CREATE_SCHEDULE_SHIFT = SHIFT + "/create";
     public static final String UPDATE_SCHEDULE_SHIFT = SHIFT + "/update";
+    public static final String GET_LIST_SHIFT = SHIFT + "/list-shift";
 
     //registerShift controller
     public static final String REGISTER_SHIFT = "/register";

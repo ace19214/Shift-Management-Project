@@ -97,4 +97,15 @@ public class ShiftServiceImp implements ShiftService {
             logger.info(Constant.END_SERVICE + "updateShift");
         }
     }
+
+    @Override
+    public List<Shift> getListShiftBySchedule(int scheduleID) throws Exception {
+        logger.info(Constant.BEGIN_SERVICE + "getListShiftBySchedule");
+        try {
+            List<Shift> result = new ArrayList<>();
+            return shiftRepository.getAllShiftByScheduleID(scheduleID);
+        }finally {
+            logger.info(Constant.END_SERVICE + "getListShiftBySchedule");
+        }
+    }
 }
