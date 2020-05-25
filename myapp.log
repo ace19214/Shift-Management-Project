@@ -297,3 +297,12 @@
 2020-05-25 20:23:16 INFO  ScheduleServiceImp:60 - Begin service :getListSchedule
 2020-05-25 20:23:17 INFO  ScheduleServiceImp:64 - End service :getListSchedule
 2020-05-25 20:23:17 INFO  ScheduleController:34 - End controller :getListSchedule
+2020-05-25 21:55:38 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-05-25 21:58:14 INFO  UserController:55 - Begin controller :searchByUsernameOrName
+2020-05-25 21:58:14 INFO  UserServiceImp:79 - Begin service :searchByUsernameAndName
+2020-05-25 21:58:15 INFO  UserServiceImp:85 - End service :searchByUsernameAndName
+2020-05-25 21:58:15 INFO  UserController:63 - End controller :searchByUsernameOrName
+2020-05-25 21:58:29 INFO  UserController:55 - Begin controller :searchByUsernameOrName
+2020-05-25 21:58:29 INFO  UserServiceImp:79 - Begin service :searchByUsernameAndName
+2020-05-25 21:58:29 INFO  UserServiceImp:85 - End service :searchByUsernameAndName
+2020-05-25 21:58:29 INFO  UserController:63 - End controller :searchByUsernameOrName
