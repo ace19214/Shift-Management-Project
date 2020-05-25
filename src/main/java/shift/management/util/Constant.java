@@ -17,6 +17,7 @@ public class Constant {
     public static final String ACTIVE = "ACTIVE";
     public static final String DISABLE = "DISABLE";
     public static final String ENABLE = "ENABLE";
+    public static final String NOT_YET = "NOT_YET";
 
 
 

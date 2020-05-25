@@ -243,3 +243,28 @@
 2020-05-25 09:38:55 INFO  RegisterShiftServiceImp:92 - Begin service :listRequest
 2020-05-25 09:38:55 INFO  RegisterShiftServiceImp:116 - End service :listRequest
 2020-05-25 09:38:55 INFO  RegisterShiftController:49 - End controller :getListRequest
+2020-05-25 16:12:41 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-05-25 16:14:11 INFO  UserShiftController:23 - Begin controller :insertApproveRequest
+2020-05-25 16:14:11 INFO  UserShiftServiceImp:48 - Begin service :insertApproveShift
+2020-05-25 16:14:11 INFO  UserShiftServiceImp:77 - End service :insertApproveShift
+2020-05-25 16:14:11 ERROR UserShiftController:28 - java.lang.Exception: Role invalid
+2020-05-25 16:14:11 INFO  UserShiftController:31 - End controller :insertApproveRequest
+2020-05-25 16:15:14 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-05-25 16:16:07 INFO  UserShiftController:23 - Begin controller :insertApproveRequest
+2020-05-25 16:16:07 INFO  UserShiftServiceImp:48 - Begin service :insertApproveShift
+2020-05-25 16:16:08 INFO  UserShiftServiceImp:77 - End service :insertApproveShift
+2020-05-25 16:16:08 INFO  UserShiftController:31 - End controller :insertApproveRequest
+2020-05-25 16:16:18 INFO  RegisterShiftController:41 - Begin controller :getListRequest
+2020-05-25 16:16:18 INFO  RegisterShiftServiceImp:92 - Begin service :listRequest
+2020-05-25 16:16:18 INFO  RegisterShiftServiceImp:116 - End service :listRequest
+2020-05-25 16:16:18 INFO  RegisterShiftController:49 - End controller :getListRequest
+2020-05-25 16:19:03 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-05-25 16:19:38 INFO  UserController:25 - Begin controller :createAccount
+2020-05-25 16:19:38 INFO  UserServiceImp:27 - Begin service :createAccount
+2020-05-25 16:19:38 INFO  UserServiceImp:44 - End service :createAccount
+2020-05-25 16:19:38 INFO  UserController:33 - End controller :createAccount
+2020-05-25 16:20:46 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-05-25 16:20:53 INFO  UserController:25 - Begin controller :createAccount
+2020-05-25 16:20:53 INFO  UserServiceImp:27 - Begin service :createAccount
+2020-05-25 16:20:54 INFO  UserServiceImp:42 - End service :createAccount
+2020-05-25 16:20:54 INFO  UserController:33 - End controller :createAccount

@@ -6,5 +6,8 @@ import shift.management.entity.Salary;
 
 @Repository
 public interface SalaryRepository extends JpaRepository<Salary, Integer> {
+    Salary findById(int id);
+
+    Salary findByRole(String role);
 
 }

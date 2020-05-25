@@ -19,4 +19,8 @@ public class URL {
     public static final String REGISTER = REGISTER_SHIFT +  "/shift";
     public static final String LIST_REQUEST = REGISTER_SHIFT + "/list-request";
 
+    //user shift controller
+    public static final String USER_SHIFT = "/shift-request";
+    public static final String INSERT_APPROVE = USER_SHIFT + "/approve";
+
 }

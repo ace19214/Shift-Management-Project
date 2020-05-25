@@ -32,7 +32,6 @@ public class UserServiceImp implements UserService {
                 throw new Exception(Message.ROLE_INVALID);
             }
             else{
-                user.setRole(Constant.STAFF);
                 user.setStatus(Constant.ACTIVE);
                 Date date = new Date();
                 user.setDate(DateUtil.convertUtilToSql(date));
