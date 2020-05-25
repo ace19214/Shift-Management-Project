@@ -291,3 +291,9 @@
 2020-05-25 20:02:49 INFO  ShiftServiceImp:103 - Begin service :getListShiftBySchedule
 2020-05-25 20:02:50 INFO  ShiftServiceImp:108 - End service :getListShiftBySchedule
 2020-05-25 20:02:50 INFO  ShiftController:67 - End controller :getListShiftBySchedule
+2020-05-25 20:20:23 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-05-25 20:22:42 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-05-25 20:23:16 INFO  ScheduleController:26 - Begin controller :getListSchedule
+2020-05-25 20:23:16 INFO  ScheduleServiceImp:60 - Begin service :getListSchedule
+2020-05-25 20:23:17 INFO  ScheduleServiceImp:64 - End service :getListSchedule
+2020-05-25 20:23:17 INFO  ScheduleController:34 - End controller :getListSchedule
