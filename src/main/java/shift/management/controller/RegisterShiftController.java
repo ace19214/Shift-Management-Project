@@ -49,4 +49,19 @@ public class RegisterShiftController {
             logger.info(Constant.END_CONTROLLER + "getListRequest");
         }
     }
+
+    //update status
+    @PutMapping(URL.DISAPPRORVE_REQUEST)
+    public ResponseEntity updateStatusRequestShift (@RequestParam String username, @RequestParam int shiftID){
+        logger.info(Constant.BEGIN_CONTROLLER + "updateStatusRequestShift");
+        try {
+
+            return new ResponseEntity(registerShiftService.disapproveRequest(username, shiftID), HttpStatus.OK);
+        }catch (Exception ex){
+            logger.error(ex);
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+        }finally {
+            logger.info(Constant.END_CONTROLLER + "updateStatusRequestShift");
+        }
+    }
 }

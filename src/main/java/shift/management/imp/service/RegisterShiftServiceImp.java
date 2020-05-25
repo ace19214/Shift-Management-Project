@@ -97,7 +97,8 @@ public class RegisterShiftServiceImp implements RegisterShiftService{
             }
             List<RegisterShift> listRegisterShift = registerShiftRepository.findAllByShiftIDAndStatus(shiftID, Constant.ENABLE);
             if(listRegisterShift.isEmpty()){
-                throw new Exception(Message.LIST_REQUEST_EMPTY);
+                List<RequestShiftReponse> response = new ArrayList<>();
+                return response;
             }
             List<RequestShiftReponse> response = new ArrayList<>();
             for(int i = 0; i < listRegisterShift.size(); i++){
@@ -116,4 +117,24 @@ public class RegisterShiftServiceImp implements RegisterShiftService{
             logger.info(Constant.END_SERVICE + "listRequest");
         }
     }
+
+    @Override
+    public boolean disapproveRequest(String username,int shiftID) throws Exception {
+        logger.info(Constant.BEGIN_SERVICE + "disapproveRequest");
+        try {
+            RegisterShift registerShift = registerShiftRepository.findByUserIDAndShiftIDAndStatus(username, shiftID, Constant.ENABLE);
+            if(registerShift == null){
+                throw new Exception(Message.REGISTER_SHIFT_NULL);
+            }
+            registerShift.setStatus(Constant.DISABLE);
+            registerShiftRepository.save(registerShift);
+            return true;
+
+        }finally {
+            logger.info(Constant.END_SERVICE + "disapproveRequest");
+        }
+    }
+
+
+
 }

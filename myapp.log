@@ -268,3 +268,20 @@
 2020-05-25 16:20:53 INFO  UserServiceImp:27 - Begin service :createAccount
 2020-05-25 16:20:54 INFO  UserServiceImp:42 - End service :createAccount
 2020-05-25 16:20:54 INFO  UserController:33 - End controller :createAccount
+2020-05-25 16:47:10 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-05-25 16:49:58 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-05-25 16:53:06 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-05-25 16:53:31 INFO  RegisterShiftController:56 - Begin controller :updateStatusRequestShift
+2020-05-25 16:53:31 INFO  RegisterShiftServiceImp:122 - Begin service :disapproveRequest
+2020-05-25 16:53:31 INFO  RegisterShiftServiceImp:133 - End service :disapproveRequest
+2020-05-25 16:53:31 INFO  RegisterShiftController:64 - End controller :updateStatusRequestShift
+2020-05-25 16:53:39 INFO  RegisterShiftController:41 - Begin controller :getListRequest
+2020-05-25 16:53:39 INFO  RegisterShiftServiceImp:92 - Begin service :listRequest
+2020-05-25 16:53:39 INFO  RegisterShiftServiceImp:116 - End service :listRequest
+2020-05-25 16:53:39 ERROR RegisterShiftController:46 - java.lang.Exception: List request is empty
+2020-05-25 16:53:39 INFO  RegisterShiftController:49 - End controller :getListRequest
+2020-05-25 16:55:07 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-05-25 16:55:23 INFO  RegisterShiftController:41 - Begin controller :getListRequest
+2020-05-25 16:55:23 INFO  RegisterShiftServiceImp:92 - Begin service :listRequest
+2020-05-25 16:55:23 INFO  RegisterShiftServiceImp:117 - End service :listRequest
+2020-05-25 16:55:23 INFO  RegisterShiftController:49 - End controller :getListRequest
