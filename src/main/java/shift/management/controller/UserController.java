@@ -49,4 +49,19 @@ public class UserController {
         }
     }
 
+    //search by username or name
+    @GetMapping(URL.SEARCH_ACCOUNT)
+    public ResponseEntity searchByUsernameOrName (@RequestParam String keyword){
+        logger.info(Constant.BEGIN_CONTROLLER + "searchByUsernameOrName");
+        try {
+
+            return new ResponseEntity(userService.searchByUsernameAndName(keyword), HttpStatus.OK);
+        }catch (Exception ex){
+            logger.error(ex);
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+        }finally {
+            logger.info(Constant.END_CONTROLLER + "searchByUsernameOrName");
+        }
+    }
+
 }

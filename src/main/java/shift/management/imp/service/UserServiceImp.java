@@ -11,7 +11,9 @@ import shift.management.util.Constant;
 import shift.management.util.DateUtil;
 import shift.management.util.Message;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Service
 public class UserServiceImp implements UserService {
@@ -69,6 +71,18 @@ public class UserServiceImp implements UserService {
         }
         finally {
             logger.info(Constant.END_SERVICE + "updateAccount");
+        }
+    }
+
+    @Override
+    public List<User> searchByUsernameAndName(String keyword) {
+        logger.info(Constant.BEGIN_SERVICE + "searchByUsernameAndName");
+        try {
+            List<User> result = new ArrayList<>();
+            return userRepository.findByUsernameContainingOrNameContaining(keyword, keyword);
+        }
+        finally {
+            logger.info(Constant.END_SERVICE + "searchByUsernameAndName");
         }
     }
 
