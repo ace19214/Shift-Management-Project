@@ -8,6 +8,7 @@ public class URL {
      public static final String USER = "/user";
      public static final String CREATE_ACCOUNT = USER + "/create";
      public static final String UPDATE_ACCOUNT = USER + "/update";
+     public static final String SEARCH_ACCOUNT = USER + "/search";
 
      //shift controller
     public static final String SHIFT = "/shift";
