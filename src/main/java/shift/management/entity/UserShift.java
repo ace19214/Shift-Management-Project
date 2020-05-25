@@ -36,4 +36,7 @@ public class UserShift {
 
     @Column(name = "finish_work")
     DateTime finishWork;
+
+    @Column(name = "salary_id")
+    int salaryID;
 }
