@@ -34,4 +34,19 @@ public class RegisterShiftController {
             logger.info(Constant.END_CONTROLLER + "registerShift");
         }
     }
+
+    //get list request
+    @GetMapping(URL.LIST_REQUEST)
+    public ResponseEntity getListRequest (@RequestParam int shiftID){
+        logger.info(Constant.BEGIN_CONTROLLER + "getListRequest");
+        try {
+
+            return new ResponseEntity(registerShiftService.listRequest(shiftID), HttpStatus.OK);
+        }catch (Exception ex){
+            logger.error(ex);
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+        }finally {
+            logger.info(Constant.END_CONTROLLER + "getListRequest");
+        }
+    }
 }

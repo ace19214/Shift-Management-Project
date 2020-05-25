@@ -7,17 +7,17 @@ import shift.management.entity.RegisterShift;
 import shift.management.entity.Schedule;
 import shift.management.entity.Shift;
 import shift.management.entity.User;
-import shift.management.repository.RegisterShiftRepository;
-import shift.management.repository.ScheduleRepository;
-import shift.management.repository.ShiftRepository;
-import shift.management.repository.UserRepository;
+import shift.management.repository.*;
 import shift.management.response.RegisterShiftResponse;
+import shift.management.response.RequestShiftReponse;
 import shift.management.service.RegisterShiftService;
 import shift.management.util.Constant;
 import shift.management.util.DateUtil;
 import shift.management.util.Message;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 
 @Service
@@ -37,10 +37,14 @@ public class RegisterShiftServiceImp implements RegisterShiftService{
     @Autowired
     ScheduleRepository scheduleRepository;
 
+    @Autowired
+    UserShiftRepository userShiftRepository;
+
+
 
     @Override
     public RegisterShiftResponse register(String username, int shiftID) throws Exception {
-        logger.info(Constant.BEGIN_SERVICE + "Register");
+        logger.info(Constant.BEGIN_SERVICE + "register");
         try {
             User user = userRepository.findByUsername(username);
             if(user == null){
@@ -79,7 +83,37 @@ public class RegisterShiftServiceImp implements RegisterShiftService{
             return response;
 
         }finally {
-            logger.info(Constant.END_SERVICE + "Register");
+            logger.info(Constant.END_SERVICE + "register");
+        }
+    }
+
+    @Override
+    public List<RequestShiftReponse> listRequest(int shiftID) throws Exception {
+        logger.info(Constant.BEGIN_SERVICE + "listRequest");
+        try {
+            Shift shift = shiftRepository.findById(shiftID);
+            if(shift == null){
+                throw new Exception(Message.SHIFT_NOT_FOUND);
+            }
+            List<RegisterShift> listRegisterShift = registerShiftRepository.findAllByShiftIDAndStatus(shiftID, Constant.ENABLE);
+            if(listRegisterShift.isEmpty()){
+                throw new Exception(Message.LIST_REQUEST_EMPTY);
+            }
+            List<RequestShiftReponse> response = new ArrayList<>();
+            for(int i = 0; i < listRegisterShift.size(); i++){
+                RequestShiftReponse dto = new RequestShiftReponse();
+                User user = userRepository.findByUsername(listRegisterShift.get(i).getUserID());
+                dto.setUsername(user.getUsername());
+                dto.setName(user.getName());
+                dto.setRole(user.getRole());
+                dto.setSlot(shift.getSlot());
+                dto.setDateRegister(DateUtil.DateFormatterTime(listRegisterShift.get(i).getDate()));
+                dto.setCountSlot(userShiftRepository.countByShiftID(shiftID));
+                response.add(dto);
+            }
+            return response;
+        }finally {
+            logger.info(Constant.END_SERVICE + "listRequest");
         }
     }
 }
