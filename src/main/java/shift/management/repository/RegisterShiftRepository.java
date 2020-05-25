@@ -13,4 +13,6 @@ public interface RegisterShiftRepository extends JpaRepository<RegisterShift, In
     RegisterShift findTopByOrderByIdDesc();
 
     List<RegisterShift> findAllByShiftIDAndStatus(int shiftID, String status);
+
+    RegisterShift findByUserIDAndShiftIDAndStatus(String username, int shiftID, String status);
 }
