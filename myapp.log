@@ -306,3 +306,69 @@
 2020-05-25 21:58:29 INFO  UserServiceImp:79 - Begin service :searchByUsernameAndName
 2020-05-25 21:58:29 INFO  UserServiceImp:85 - End service :searchByUsernameAndName
 2020-05-25 21:58:29 INFO  UserController:63 - End controller :searchByUsernameOrName
+2020-05-25 22:19:26 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-05-25 22:39:33 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-05-25 22:42:16 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-05-25 22:42:30 INFO  UserShiftController:38 - Begin controller :takeAttendance
+2020-05-25 22:42:30 INFO  UserShiftServiceImp:85 - Begin service :takeAttendance
+2020-05-25 22:42:30 INFO  UserShiftServiceImp:97 - End service :takeAttendance
+2020-05-25 22:42:30 INFO  UserShiftController:46 - End controller :takeAttendance
+2020-05-25 22:46:38 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-05-25 22:47:11 INFO  UserShiftController:38 - Begin controller :takeAttendance
+2020-05-25 22:47:11 INFO  UserShiftServiceImp:85 - Begin service :takeAttendance
+2020-05-25 22:47:12 INFO  UserShiftServiceImp:97 - End service :takeAttendance
+2020-05-25 22:47:12 INFO  UserShiftController:46 - End controller :takeAttendance
+2020-05-26 10:20:39 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-05-26 10:20:49 INFO  UserShiftController:38 - Begin controller :takeAttendance
+2020-05-26 10:20:49 INFO  UserShiftServiceImp:85 - Begin service :takeAttendance
+2020-05-26 10:20:50 INFO  UserShiftServiceImp:97 - End service :takeAttendance
+2020-05-26 10:20:50 ERROR UserShiftController:43 - java.lang.Exception: UserShift not found
+2020-05-26 10:20:50 INFO  UserShiftController:46 - End controller :takeAttendance
+2020-05-26 10:22:09 INFO  UserShiftController:23 - Begin controller :insertApproveRequest
+2020-05-26 10:22:09 INFO  UserShiftServiceImp:50 - Begin service :insertApproveShift
+2020-05-26 10:22:09 INFO  UserShiftServiceImp:79 - End service :insertApproveShift
+2020-05-26 10:22:09 INFO  UserShiftController:31 - End controller :insertApproveRequest
+2020-05-26 10:22:35 INFO  UserShiftController:38 - Begin controller :takeAttendance
+2020-05-26 10:22:35 INFO  UserShiftServiceImp:85 - Begin service :takeAttendance
+2020-05-26 10:22:35 INFO  UserShiftServiceImp:97 - End service :takeAttendance
+2020-05-26 10:22:35 INFO  UserShiftController:46 - End controller :takeAttendance
+2020-05-26 10:24:51 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-05-26 10:25:02 INFO  UserShiftController:23 - Begin controller :insertApproveRequest
+2020-05-26 10:25:02 INFO  UserShiftServiceImp:50 - Begin service :insertApproveShift
+2020-05-26 10:25:03 INFO  UserShiftServiceImp:81 - End service :insertApproveShift
+2020-05-26 10:25:03 INFO  UserShiftController:31 - End controller :insertApproveRequest
+2020-05-26 10:26:40 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-05-26 10:26:49 INFO  UserShiftController:23 - Begin controller :insertApproveRequest
+2020-05-26 10:26:49 INFO  UserShiftServiceImp:50 - Begin service :insertApproveShift
+2020-05-26 10:26:50 INFO  UserShiftServiceImp:79 - End service :insertApproveShift
+2020-05-26 10:26:50 INFO  UserShiftController:31 - End controller :insertApproveRequest
+2020-05-26 10:27:19 INFO  UserShiftController:38 - Begin controller :takeAttendance
+2020-05-26 10:27:19 INFO  UserShiftServiceImp:85 - Begin service :takeAttendance
+2020-05-26 10:27:19 INFO  UserShiftServiceImp:97 - End service :takeAttendance
+2020-05-26 10:27:19 INFO  UserShiftController:46 - End controller :takeAttendance
+2020-05-26 10:56:25 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-05-26 10:56:33 INFO  UserShiftController:38 - Begin controller :takeAttendance
+2020-05-26 10:56:33 INFO  UserShiftServiceImp:85 - Begin service :takeAttendance
+2020-05-26 10:56:34 INFO  UserShiftServiceImp:99 - End service :takeAttendance
+2020-05-26 10:56:34 ERROR UserShiftController:43 - java.lang.NumberFormatException: For input string: "08:00:00"
+2020-05-26 10:56:34 INFO  UserShiftController:46 - End controller :takeAttendance
+2020-05-26 10:59:45 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-05-26 10:59:59 INFO  UserShiftController:38 - Begin controller :takeAttendance
+2020-05-26 10:59:59 INFO  UserShiftServiceImp:85 - Begin service :takeAttendance
+2020-05-26 11:00:00 INFO  UserShiftServiceImp:99 - End service :takeAttendance
+2020-05-26 11:00:00 INFO  UserShiftController:46 - End controller :takeAttendance
+2020-05-26 11:08:44 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-05-26 11:08:53 INFO  UserShiftController:38 - Begin controller :takeAttendance
+2020-05-26 11:08:53 INFO  UserShiftServiceImp:85 - Begin service :takeAttendance
+2020-05-26 11:08:53 INFO  UserShiftServiceImp:101 - End service :takeAttendance
+2020-05-26 11:08:53 INFO  UserShiftController:46 - End controller :takeAttendance
+2020-05-26 14:59:23 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-05-26 15:00:02 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-05-26 15:01:47 INFO  UserShiftController:53 - Begin controller :finishShiftAndComputeSalary
+2020-05-26 15:01:47 INFO  UserShiftServiceImp:100 - Begin service :finishShiftAndComputeSalary
+2020-05-26 15:01:48 INFO  UserShiftServiceImp:126 - End service :finishShiftAndComputeSalary
+2020-05-26 15:01:48 INFO  UserShiftController:61 - End controller :finishShiftAndComputeSalary
+2020-05-26 15:02:26 INFO  UserShiftController:53 - Begin controller :finishShiftAndComputeSalary
+2020-05-26 15:02:26 INFO  UserShiftServiceImp:100 - Begin service :finishShiftAndComputeSalary
+2020-05-26 15:02:26 INFO  UserShiftServiceImp:126 - End service :finishShiftAndComputeSalary
+2020-05-26 15:02:26 INFO  UserShiftController:61 - End controller :finishShiftAndComputeSalary

@@ -1,6 +1,7 @@
 package shift.management.imp.service;
 
 import org.apache.log4j.Logger;
+import org.apache.tomcat.util.bcel.Const;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import shift.management.entity.*;
@@ -14,6 +15,7 @@ import shift.management.util.Constant;
 import shift.management.util.DateUtil;
 import shift.management.util.Message;
 
+import java.sql.Time;
 import java.util.Date;
 import java.util.List;
 
@@ -38,9 +40,6 @@ public class UserShiftServiceImp implements UserShiftService{
 
     @Autowired
     SalaryRepository salaryRepository;
-
-    @Autowired
-    RegisterShiftService registerShiftService;
 
 
     @Override
@@ -75,6 +74,56 @@ public class UserShiftServiceImp implements UserShiftService{
 
         }finally {
             logger.info(Constant.END_SERVICE + "insertApproveShift");
+        }
+    }
+
+    @Override
+    public boolean takeAttendance(String username, int shiftID, String startWork) throws Exception {
+        logger.info(Constant.BEGIN_SERVICE + "takeAttendance");
+        try {
+            UserShift userShift = userShiftRepository.findByUserIDAndShiftID(username, shiftID);
+            if(userShift == null){
+                throw new Exception(Message.USER_SHIFT_NOT_FOUND);
+            }
+            userShift.setStatus(Constant.PRESENT);
+            userShift.setStartWork(Time.valueOf(startWork));
+            userShiftRepository.save(userShift);
+
+            return true;
+        }finally{
+            logger.info(Constant.END_SERVICE + "takeAttendance");
+        }
+    }
+
+    @Override
+    public boolean finishShiftAndComputeSalary(String username,int scheduleID, int shiftID, String finishWork) throws Exception{
+        logger.info(Constant.BEGIN_SERVICE + "finishShiftAndComputeSalary");
+        try {
+            UserShift userShift = userShiftRepository.findByUserIDAndShiftID(username, shiftID);
+            if(userShift == null){
+                throw new Exception(Message.USER_SHIFT_NOT_FOUND);
+            }
+            userShift.setFinishWork(Time.valueOf(finishWork));
+            Schedule schedule = scheduleRepository.findById(scheduleID);
+            if(schedule == null){
+                throw new Exception(Message.SCHEDULE_NOT_FOUND);
+            }
+            Salary salary = salaryRepository.findById(userShift.getSalaryID());
+            if(salary == null){
+                throw new Exception(Message.SALARY_NOT_FOUND);
+            }
+            int hour = userShift.getFinishWork().getHours() - userShift.getStartWork().getHours();
+            int minutes = userShift.getFinishWork().getMinutes() - userShift.getStartWork().getMinutes();
+
+            float wagesHour = hour * salary.getSalary();
+            float wagesMinutes = (salary.getSalary() / 60) * minutes;
+
+            float wages = wagesHour + wagesMinutes;
+            userShift.setWages(Math.round(wages));
+            userShiftRepository.save(userShift);
+            return true;
+        }finally{
+            logger.info(Constant.END_SERVICE + "finishShiftAndComputeSalary");
         }
     }
 }

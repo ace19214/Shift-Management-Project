@@ -6,6 +6,7 @@ import lombok.Setter;
 import org.joda.time.DateTime;
 
 import javax.persistence.*;
+import java.sql.Time;
 
 @Entity
 @Table(name = "user_shift")
@@ -32,10 +33,10 @@ public class UserShift {
     float wages;
 
     @Column(name = "start_work")
-    DateTime startWork;
+    Time startWork;
 
     @Column(name = "finish_work")
-    DateTime finishWork;
+    Time finishWork;
 
     @Column(name = "salary_id")
     int salaryID;

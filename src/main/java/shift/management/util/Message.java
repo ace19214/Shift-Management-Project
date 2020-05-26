@@ -13,4 +13,6 @@ public class Message {
     public static final String SCHEDULE_NOT_FOUND = "Schedule not found";
     public static final String LIST_REQUEST_EMPTY = "List request is empty";
     public static final String REGISTER_SHIFT_NULL = "Register shift is null";
+    public static final String USER_SHIFT_NOT_FOUND = "UserShift not found";
+    public static final String SALARY_NOT_FOUND = "Salary not found";
 }

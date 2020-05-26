@@ -25,6 +25,8 @@ public class URL {
     //user shift controller
     public static final String USER_SHIFT = "/shift-request";
     public static final String INSERT_APPROVE = USER_SHIFT + "/approve";
+    public static final String TAKE_ATTENDANCE = USER_SHIFT + "/take-attendance";
+    public static final String FINISH_SHIFT_COMPUTE_SALARY = USER_SHIFT + "/compute-salary";
 
     //schedule controller
     public static final String SCHEDULE = "/schedule";
