@@ -31,4 +31,34 @@ public class UserShiftController {
             logger.info(Constant.END_CONTROLLER + "insertApproveRequest");
         }
     }
+
+    //take attendance
+    @PutMapping(URL.TAKE_ATTENDANCE)
+    public ResponseEntity takeAttendance (@RequestParam String username,@RequestParam int shiftID, @RequestParam String startWork){
+        logger.info(Constant.BEGIN_CONTROLLER + "takeAttendance");
+        try {
+
+            return new ResponseEntity(userShiftService.takeAttendance(username,shiftID, startWork), HttpStatus.OK);
+        }catch (Exception ex){
+            logger.error(ex);
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+        }finally {
+            logger.info(Constant.END_CONTROLLER + "takeAttendance");
+        }
+    }
+
+    //take attendance
+    @PostMapping(URL.FINISH_SHIFT_COMPUTE_SALARY)
+    public ResponseEntity finishShiftAndComputeSalary (@RequestParam String username, @RequestParam int scheduleID,@RequestParam int shiftID, @RequestParam String finishWork){
+        logger.info(Constant.BEGIN_CONTROLLER + "finishShiftAndComputeSalary");
+        try {
+
+            return new ResponseEntity(userShiftService.finishShiftAndComputeSalary(username,scheduleID, shiftID, finishWork), HttpStatus.OK);
+        }catch (Exception ex){
+            logger.error(ex);
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+        }finally {
+            logger.info(Constant.END_CONTROLLER + "finishShiftAndComputeSalary");
+        }
+    }
 }

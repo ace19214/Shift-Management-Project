@@ -8,4 +8,6 @@ import shift.management.entity.UserShift;
 public interface UserShiftRepository extends JpaRepository<UserShift, Integer> {
 
     int countByShiftID(int shiftID);
+
+    UserShift findByUserIDAndShiftID(String username, int shiftID);
 }
