@@ -5,9 +5,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import shift.management.entity.UserShift;
 import shift.management.service.UserShiftService;
 import shift.management.util.Constant;
 import shift.management.util.URL;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
 
 @RestController
 @RequestMapping(URL.API)
@@ -59,6 +64,34 @@ public class UserShiftController {
             return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
         }finally {
             logger.info(Constant.END_CONTROLLER + "finishShiftAndComputeSalary");
+        }
+    }
+
+    //find user_shift by date
+    @GetMapping(URL.USER_SHIFT_DATE)
+    public ResponseEntity<?> findUserShiftByDate(@RequestParam String dateStr){
+        try {
+            Date date = new SimpleDateFormat("yyyy-MM-dd").parse(dateStr);
+            return ResponseEntity.ok(userShiftService.findUserShiftByDate(date));
+        } catch (Exception e) {
+            logger.error(e);
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }finally {
+            logger.info(Constant.END_CONTROLLER + "findUserShiftByDate");
+        }
+    }
+
+    @PutMapping(URL.TAKE_ATTENDANCE2)
+    public ResponseEntity<?> takeAttendance2 (@RequestParam int userShiftId){
+        logger.info(Constant.BEGIN_CONTROLLER + "takeAttendance2");
+        try {
+
+            return ResponseEntity.ok(userShiftService.takeAttendance2(userShiftId));
+        }catch (Exception ex){
+            logger.error(ex);
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }finally {
+            logger.info(Constant.END_CONTROLLER + "takeAttendance2");
         }
     }
 }

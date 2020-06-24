@@ -372,3 +372,46 @@
 2020-05-26 15:02:26 INFO  UserShiftServiceImp:100 - Begin service :finishShiftAndComputeSalary
 2020-05-26 15:02:26 INFO  UserShiftServiceImp:126 - End service :finishShiftAndComputeSalary
 2020-05-26 15:02:26 INFO  UserShiftController:61 - End controller :finishShiftAndComputeSalary
+2020-06-15 11:08:49 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-06-24 10:52:07 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-06-24 17:18:57 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-06-24 18:06:14 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-06-24 18:07:09 ERROR UserShiftController:77 - java.lang.ClassCastException: class java.util.Date cannot be cast to class java.sql.Date (java.util.Date is in module java.base of loader 'bootstrap'; java.sql.Date is in module java.sql of loader 'platform')
+2020-06-24 18:07:09 INFO  UserShiftController:80 - End controller :findUserShiftByDate
+2020-06-24 18:08:05 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-06-24 18:08:41 ERROR UserShiftController:77 - java.lang.ClassCastException: class java.util.Date cannot be cast to class java.sql.Date (java.util.Date is in module java.base of loader 'bootstrap'; java.sql.Date is in module java.sql of loader 'platform')
+2020-06-24 18:08:50 INFO  UserShiftController:80 - End controller :findUserShiftByDate
+2020-06-24 18:13:36 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-06-24 18:13:42 INFO  UserShiftController:80 - End controller :findUserShiftByDate
+2020-06-24 18:15:14 INFO  UserShiftController:80 - End controller :findUserShiftByDate
+2020-06-24 18:15:56 INFO  UserShiftController:80 - End controller :findUserShiftByDate
+2020-06-24 19:06:44 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-06-24 19:06:52 INFO  UserShiftController:80 - End controller :findUserShiftByDate
+2020-06-24 19:08:30 INFO  UserShiftController:80 - End controller :findUserShiftByDate
+2020-06-24 19:14:02 INFO  UserShiftController:80 - End controller :findUserShiftByDate
+2020-06-24 19:14:44 INFO  UserShiftController:80 - End controller :findUserShiftByDate
+2020-06-24 19:14:49 INFO  UserShiftController:80 - End controller :findUserShiftByDate
+2020-06-24 19:15:07 INFO  UserShiftController:80 - End controller :findUserShiftByDate
+2020-06-24 19:32:52 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-06-24 19:33:42 INFO  UserShiftController:86 - Begin controller :takeAttendance2
+2020-06-24 19:33:42 INFO  UserShiftServiceImp:155 - Begin service :takeAttendance2
+2020-06-24 19:33:43 INFO  UserShiftServiceImp:165 - End service :takeAttendance2
+2020-06-24 19:33:43 INFO  UserShiftController:94 - End controller :takeAttendance2
+2020-06-24 19:33:59 INFO  UserShiftController:86 - Begin controller :takeAttendance2
+2020-06-24 19:33:59 INFO  UserShiftServiceImp:155 - Begin service :takeAttendance2
+2020-06-24 19:33:59 INFO  UserShiftServiceImp:165 - End service :takeAttendance2
+2020-06-24 19:33:59 INFO  UserShiftController:94 - End controller :takeAttendance2
+2020-06-24 19:34:33 INFO  UserShiftController:86 - Begin controller :takeAttendance2
+2020-06-24 19:34:33 INFO  UserShiftServiceImp:155 - Begin service :takeAttendance2
+2020-06-24 19:34:33 INFO  UserShiftServiceImp:165 - End service :takeAttendance2
+2020-06-24 19:34:33 ERROR UserShiftController:91 - java.lang.Exception
+2020-06-24 19:34:33 INFO  UserShiftController:94 - End controller :takeAttendance2
+2020-06-24 19:35:14 INFO  UserShiftServiceImp:130 - Begin service :findUserShiftByDate
+2020-06-24 19:35:15 INFO  UserShiftServiceImp:149 - End service :takeAttendance
+2020-06-24 19:35:15 INFO  UserShiftController:80 - End controller :findUserShiftByDate
+2020-06-24 19:35:22 INFO  UserShiftServiceImp:130 - Begin service :findUserShiftByDate
+2020-06-24 19:35:22 INFO  UserShiftServiceImp:149 - End service :takeAttendance
+2020-06-24 19:35:22 INFO  UserShiftController:80 - End controller :findUserShiftByDate
+2020-06-24 19:36:15 INFO  UserShiftServiceImp:130 - Begin service :findUserShiftByDate
+2020-06-24 19:36:16 INFO  UserShiftServiceImp:149 - End service :takeAttendance
+2020-06-24 19:36:16 INFO  UserShiftController:80 - End controller :findUserShiftByDate

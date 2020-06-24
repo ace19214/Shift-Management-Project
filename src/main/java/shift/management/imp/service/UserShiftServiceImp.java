@@ -1,23 +1,21 @@
 package shift.management.imp.service;
 
+import org.apache.commons.lang3.ObjectUtils;
 import org.apache.log4j.Logger;
-import org.apache.tomcat.util.bcel.Const;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import shift.management.entity.*;
 import shift.management.repository.*;
-import shift.management.response.ApproveRequestResponse;
-import shift.management.response.RegisterShiftResponse;
-import shift.management.response.RequestShiftReponse;
-import shift.management.service.RegisterShiftService;
+import shift.management.response.UserShiftResponse;
 import shift.management.service.UserShiftService;
 import shift.management.util.Constant;
-import shift.management.util.DateUtil;
 import shift.management.util.Message;
 
 import java.sql.Time;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 @Service
 public class UserShiftServiceImp implements UserShiftService{
@@ -76,7 +74,7 @@ public class UserShiftServiceImp implements UserShiftService{
             logger.info(Constant.END_SERVICE + "insertApproveShift");
         }
     }
-
+    //để dành mốt có làm cái "đi trễ về sớm" thì gọi nha
     @Override
     public boolean takeAttendance(String username, int shiftID, String startWork) throws Exception {
         logger.info(Constant.BEGIN_SERVICE + "takeAttendance");
@@ -125,5 +123,61 @@ public class UserShiftServiceImp implements UserShiftService{
         }finally{
             logger.info(Constant.END_SERVICE + "finishShiftAndComputeSalary");
         }
+    }
+
+    @Override
+    public List<UserShiftResponse> findUserShiftByDate(Date date) {
+        logger.info(Constant.BEGIN_SERVICE + "findUserShiftByDate");
+        java.sql.Date sqlDate = new java.sql.Date(date.getTime());
+        Schedule schedule = scheduleRepository.findByDate(sqlDate);
+        try{
+            if(Objects.nonNull(schedule)){
+                List<Shift> shiftList = shiftRepository.findByScheduleID(schedule.getId());
+                if(ObjectUtils.isNotEmpty(shiftList)){
+                    List<UserShiftResponse> userShiftsRes = new ArrayList<>();
+                    for (Shift shift : shiftList) {
+                        List<UserShift> userShifts= userShiftRepository.findByShiftID(shift.getId());
+                        for (UserShift userShift : userShifts){
+                            userShiftsRes.add(parseToUserShiftResponse(userShift));
+                        }
+                    }
+                    return userShiftsRes;
+                }
+            }
+            return null;
+        }finally {
+            logger.info(Constant.END_SERVICE + "takeAttendance");
+        }
+    }
+
+    @Override
+    public boolean takeAttendance2(int userShiftId) throws Exception{
+        logger.info(Constant.BEGIN_SERVICE + "takeAttendance2");
+        try {
+            UserShift userShift = userShiftRepository.findById(userShiftId)
+                    .orElseThrow(Exception::new);
+
+            userShift.setStatus(Constant.PRESENT);
+            userShiftRepository.save(userShift);
+
+            return true;
+        }finally{
+            logger.info(Constant.END_SERVICE + "takeAttendance2");
+        }
+    }
+
+    private UserShiftResponse parseToUserShiftResponse(UserShift userShift){
+        UserShiftResponse userShiftResponse = new UserShiftResponse();
+        userShiftResponse.setId(userShift.getId());
+        userShiftResponse.setFinishWork(userShift.getFinishWork());
+        userShiftResponse.setSalaryID(userShift.getSalaryID());
+        userShiftResponse.setStatus(userShift.getStatus());
+        userShiftResponse.setStartWork(userShift.getStartWork());
+        userShiftResponse.setUser(userRepository.findByUsername(userShift.getUserID()));
+        userShiftResponse.setShift(shiftRepository.findById(userShift.getShiftID()));
+        userShiftResponse.setTimeOur(userShift.getTimeOur());
+        userShiftResponse.setWages(userShift.getWages());
+
+        return userShiftResponse;
     }
 }

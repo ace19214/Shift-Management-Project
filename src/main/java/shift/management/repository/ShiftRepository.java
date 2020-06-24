@@ -11,4 +11,6 @@ public interface ShiftRepository extends JpaRepository<Shift, Integer> {
     List<Shift> getAllShiftByScheduleID(int id);
 
     Shift findById(int id);
+
+    List<Shift> findByScheduleID(int scheduleId);
 }
