@@ -31,7 +31,7 @@ public class UserShiftController {
             return new ResponseEntity(userShiftService.insertApproveShift(username,shiftID, registerID), HttpStatus.OK);
         }catch (Exception ex){
             logger.error(ex);
-            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity(ex.getMessage(), HttpStatus.OK);
         }finally {
             logger.info(Constant.END_CONTROLLER + "insertApproveRequest");
         }
@@ -46,7 +46,7 @@ public class UserShiftController {
             return new ResponseEntity(userShiftService.takeAttendance(username,shiftID, startWork), HttpStatus.OK);
         }catch (Exception ex){
             logger.error(ex);
-            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity(ex.getMessage(), HttpStatus.OK);
         }finally {
             logger.info(Constant.END_CONTROLLER + "takeAttendance");
         }
@@ -57,11 +57,10 @@ public class UserShiftController {
     public ResponseEntity finishShiftAndComputeSalary (@RequestParam String username, @RequestParam int scheduleID,@RequestParam int shiftID, @RequestParam String finishWork){
         logger.info(Constant.BEGIN_CONTROLLER + "finishShiftAndComputeSalary");
         try {
-
             return new ResponseEntity(userShiftService.finishShiftAndComputeSalary(username,scheduleID, shiftID, finishWork), HttpStatus.OK);
         }catch (Exception ex){
             logger.error(ex);
-            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity(ex.getMessage(), HttpStatus.OK);
         }finally {
             logger.info(Constant.END_CONTROLLER + "finishShiftAndComputeSalary");
         }
@@ -73,9 +72,9 @@ public class UserShiftController {
         try {
             Date date = new SimpleDateFormat("yyyy-MM-dd").parse(dateStr);
             return ResponseEntity.ok(userShiftService.findUserShiftByDate(date));
-        } catch (Exception e) {
-            logger.error(e);
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        } catch (Exception ex) {
+            logger.error(ex);
+            return new ResponseEntity(ex.getMessage(), HttpStatus.OK);
         }finally {
             logger.info(Constant.END_CONTROLLER + "findUserShiftByDate");
         }
@@ -89,9 +88,24 @@ public class UserShiftController {
             return ResponseEntity.ok(userShiftService.takeAttendance2(userShiftId));
         }catch (Exception ex){
             logger.error(ex);
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity(ex.getMessage(), HttpStatus.OK);
         }finally {
             logger.info(Constant.END_CONTROLLER + "takeAttendance2");
+        }
+    }
+
+
+    @GetMapping(URL.LIST_USER_SHIFT)
+    public ResponseEntity<?> getListUserShift (@RequestParam int shiftId){
+        logger.info(Constant.BEGIN_CONTROLLER + "getListUserShift");
+        try {
+
+            return ResponseEntity.ok(userShiftService.getAllUserByShiftId(shiftId));
+        }catch (Exception ex){
+            logger.error(ex);
+            return new ResponseEntity(ex.getMessage(), HttpStatus.OK);
+        }finally {
+            logger.info(Constant.END_CONTROLLER + "getListUserShift");
         }
     }
 }

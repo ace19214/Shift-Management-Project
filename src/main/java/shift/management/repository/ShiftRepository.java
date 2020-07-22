@@ -4,6 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import shift.management.entity.Shift;
 
+import java.sql.Date;
 import java.util.List;
 
 @Repository
@@ -12,5 +13,7 @@ public interface ShiftRepository extends JpaRepository<Shift, Integer> {
 
     Shift findById(int id);
 
-    List<Shift> findByScheduleID(int scheduleId);
+    List<Shift> findAllByScheduleID(int scheduleId);
+
+
 }

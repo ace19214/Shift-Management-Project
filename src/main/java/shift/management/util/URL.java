@@ -9,6 +9,7 @@ public class URL {
      public static final String CREATE_ACCOUNT = USER + "/create";
      public static final String UPDATE_ACCOUNT = USER + "/update";
      public static final String SEARCH_ACCOUNT = USER + "/search";
+    public static final String LIST_ACCOUNT = USER + "/list-account";
 
      //shift controller
     public static final String SHIFT = "/shift";
@@ -29,6 +30,7 @@ public class URL {
     public static final String FINISH_SHIFT_COMPUTE_SALARY = USER_SHIFT + "/compute-salary";
     public static final String USER_SHIFT_DATE = USER_SHIFT + "/user-shift-date";
     public static final String TAKE_ATTENDANCE2 = USER_SHIFT + "/take-attendance2";
+    public static final String LIST_USER_SHIFT = USER_SHIFT + "/list-user-shift";
 
     //schedule controller
     public static final String SCHEDULE = "/schedule";

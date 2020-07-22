@@ -14,6 +14,8 @@ import shift.management.service.UserService;
 import shift.management.util.Constant;
 import shift.management.util.URL;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -33,7 +35,7 @@ public class ShiftController {
             return new ResponseEntity(shiftService.createShift(list), HttpStatus.OK);
         }catch (Exception ex){
             logger.error(ex);
-            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity(ex.getMessage(), HttpStatus.OK);
         }finally {
             logger.info(Constant.END_CONTROLLER + "createScheduleAndShift");
         }
@@ -48,7 +50,7 @@ public class ShiftController {
             return new ResponseEntity(shiftService.updateShift(list), HttpStatus.OK);
         }catch (Exception ex){
             logger.error(ex);
-            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity(ex.getMessage(), HttpStatus.OK);
         }finally {
             logger.info(Constant.END_CONTROLLER + "updateScheduleAndShift");
         }
@@ -56,14 +58,14 @@ public class ShiftController {
 
     //get list shift
     @GetMapping(URL.GET_LIST_SHIFT)
-    public ResponseEntity getListShiftBySchedule (@RequestParam int scheduleID){
+    public ResponseEntity getListShiftBySchedule (@RequestParam String dateStr){
         logger.info(Constant.BEGIN_CONTROLLER + "getListShiftBySchedule");
         try {
-
-            return new ResponseEntity(shiftService.getListShiftBySchedule(scheduleID), HttpStatus.OK);
+            Date date = new SimpleDateFormat("yyyy-MM-dd").parse(dateStr);
+            return new ResponseEntity(shiftService.getListShiftBySchedule(date), HttpStatus.OK);
         }catch (Exception ex){
             logger.error(ex);
-            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity(ex.getMessage(), HttpStatus.OK);
         }finally {
             logger.info(Constant.END_CONTROLLER + "getListShiftBySchedule");
         }

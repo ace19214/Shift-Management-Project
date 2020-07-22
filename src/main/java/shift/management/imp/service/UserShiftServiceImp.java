@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import shift.management.entity.*;
 import shift.management.repository.*;
+import shift.management.response.UserOnShiftResponse;
 import shift.management.response.UserShiftResponse;
 import shift.management.service.UserShiftService;
 import shift.management.util.Constant;
@@ -94,9 +95,13 @@ public class UserShiftServiceImp implements UserShiftService{
     }
 
     @Override
-    public boolean finishShiftAndComputeSalary(String username,int scheduleID, int shiftID, String finishWork) throws Exception{
+    public UserShift finishShiftAndComputeSalary(String username,int scheduleID, int shiftID, String finishWork) throws Exception{
         logger.info(Constant.BEGIN_SERVICE + "finishShiftAndComputeSalary");
         try {
+            User user = userRepository.findByUsername(username);
+            if(user == null){
+                throw new Exception(Message.ACCOUNT_NOT_FOUND);
+            }
             UserShift userShift = userShiftRepository.findByUserIDAndShiftID(username, shiftID);
             if(userShift == null){
                 throw new Exception(Message.USER_SHIFT_NOT_FOUND);
@@ -110,16 +115,20 @@ public class UserShiftServiceImp implements UserShiftService{
             if(salary == null){
                 throw new Exception(Message.SALARY_NOT_FOUND);
             }
-            int hour = userShift.getFinishWork().getHours() - userShift.getStartWork().getHours();
-            int minutes = userShift.getFinishWork().getMinutes() - userShift.getStartWork().getMinutes();
+            Shift shift = shiftRepository.findById(shiftID);
+            if(shift == null){
+                throw new Exception(Message.SHIFT_NOT_FOUND);
+            }
+            int hour = shift.getFinish().getHours() - shift.getStart().getHours();
+            int minutes = shift.getFinish().getMinutes() - shift.getStart().getMinutes();
 
             float wagesHour = hour * salary.getSalary();
             float wagesMinutes = (salary.getSalary() / 60) * minutes;
 
-            float wages = wagesHour + wagesMinutes;
+            float wages = (wagesHour + wagesMinutes) * user.getWeight() * schedule.getBonusRate();
             userShift.setWages(Math.round(wages));
             userShiftRepository.save(userShift);
-            return true;
+            return userShift;
         }finally{
             logger.info(Constant.END_SERVICE + "finishShiftAndComputeSalary");
         }
@@ -132,11 +141,11 @@ public class UserShiftServiceImp implements UserShiftService{
         Schedule schedule = scheduleRepository.findByDate(sqlDate);
         try{
             if(Objects.nonNull(schedule)){
-                List<Shift> shiftList = shiftRepository.findByScheduleID(schedule.getId());
+                List<Shift> shiftList = shiftRepository.findAllByScheduleID(schedule.getId());
                 if(ObjectUtils.isNotEmpty(shiftList)){
                     List<UserShiftResponse> userShiftsRes = new ArrayList<>();
                     for (Shift shift : shiftList) {
-                        List<UserShift> userShifts= userShiftRepository.findByShiftID(shift.getId());
+                        List<UserShift> userShifts= userShiftRepository.findAllByShiftID(shift.getId());
                         for (UserShift userShift : userShifts){
                             userShiftsRes.add(parseToUserShiftResponse(userShift));
                         }
@@ -163,6 +172,31 @@ public class UserShiftServiceImp implements UserShiftService{
             return true;
         }finally{
             logger.info(Constant.END_SERVICE + "takeAttendance2");
+        }
+    }
+
+    @Override
+    public List<UserOnShiftResponse> getAllUserByShiftId(int shiftId) throws Exception {
+        logger.info(Constant.BEGIN_SERVICE + "getAllUserByShiftId");
+        try {
+            Shift shift = shiftRepository.findById(shiftId);
+            if(shift == null){
+                throw new Exception(Message.SHIFT_NOT_FOUND);
+            }
+            List<UserOnShiftResponse> response = new ArrayList<>();
+            List<UserShift> userShiftList = userShiftRepository.findAllByShiftID(shiftId);
+            if(!userShiftList.isEmpty()){
+                for(int i = 0; i < userShiftList.size(); i++){
+                    UserOnShiftResponse dto = new UserOnShiftResponse();
+                    dto.setUserShift(userShiftList.get(i));
+                    User user = userRepository.findByUsername(userShiftList.get(i).getUserID());
+                    dto.setUser(user);
+                    response.add(dto);
+                }
+            }
+            return response;
+        }finally{
+            logger.info(Constant.END_SERVICE + "getAllUserByShiftId");
         }
     }
 

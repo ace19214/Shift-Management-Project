@@ -1,5 +1,6 @@
 package shift.management.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,6 +19,7 @@ public class User {
     @Id
     String username;
 
+    @JsonIgnore
     String password;
 
     String name;

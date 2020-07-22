@@ -1,5 +1,7 @@
 package shift.management.service;
 
+import shift.management.entity.UserShift;
+import shift.management.response.UserOnShiftResponse;
 import shift.management.response.UserShiftResponse;
 
 import java.util.Date;
@@ -10,9 +12,11 @@ public interface UserShiftService {
 
     boolean takeAttendance(String username, int shiftID, String startWork)throws Exception;
 
-    boolean finishShiftAndComputeSalary(String username,int scheduleID, int shiftID, String finishWork) throws Exception;
+    UserShift finishShiftAndComputeSalary(String username, int scheduleID, int shiftID, String finishWork) throws Exception;
 
     List<UserShiftResponse> findUserShiftByDate(Date date);
 
     boolean takeAttendance2(int userShiftId)throws Exception;
+
+    List<UserOnShiftResponse> getAllUserByShiftId(int shiftId)throws Exception;
 }

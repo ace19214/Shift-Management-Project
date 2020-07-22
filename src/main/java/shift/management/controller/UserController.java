@@ -28,7 +28,7 @@ public class UserController {
             return new ResponseEntity(userService.createAccount(user), HttpStatus.OK);
         }catch (Exception ex){
             logger.error(ex);
-            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity(ex.getMessage(), HttpStatus.OK);
         }finally {
             logger.info(Constant.END_CONTROLLER + "createAccount");
         }
@@ -43,7 +43,7 @@ public class UserController {
             return new ResponseEntity(userService.updateAccount(user), HttpStatus.OK);
         }catch (Exception ex){
             logger.error(ex);
-            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity(ex.getMessage(), HttpStatus.OK);
         }finally {
             logger.info(Constant.END_CONTROLLER + "updateAccount");
         }
@@ -58,9 +58,23 @@ public class UserController {
             return new ResponseEntity(userService.searchByUsernameAndName(keyword), HttpStatus.OK);
         }catch (Exception ex){
             logger.error(ex);
-            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity(ex.getMessage(), HttpStatus.OK);
         }finally {
             logger.info(Constant.END_CONTROLLER + "searchByUsernameOrName");
+        }
+    }
+
+    @GetMapping(URL.LIST_ACCOUNT)
+    public ResponseEntity getListAccount (){
+        logger.info(Constant.BEGIN_CONTROLLER + "getListAccount");
+        try {
+
+            return new ResponseEntity(userService.getListAccount(), HttpStatus.OK);
+        }catch (Exception ex){
+            logger.error(ex);
+            return new ResponseEntity(ex.getMessage(), HttpStatus.OK);
+        }finally {
+            logger.info(Constant.END_CONTROLLER + "getListAccount");
         }
     }
 

@@ -18,6 +18,7 @@ import shift.management.util.Message;
 
 import java.sql.Time;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -38,7 +39,7 @@ public class ShiftServiceImp implements ShiftService {
         try {
 
             Schedule schedule = scheduleService.createSchedule(list.get(0).getDate(), list.get(0).getBonusRate());
-            Schedule schedule1 = scheduleRepository.findByDate(DateUtil.convertUtilToSql(schedule.getDate()));
+            Schedule schedule1 = scheduleRepository.findByDate(schedule.getDate());
             for(int i =0 ; i < list.size(); i++){
                 Shift shift = new Shift(0, Time.valueOf(list.get(i).getStart()), Time.valueOf(list.get(i).getFinish()),list.get(i).getSlot() ,schedule1.getId());
                 shiftRepository.save(shift);
@@ -49,7 +50,7 @@ public class ShiftServiceImp implements ShiftService {
                 ScheduleShiftResponse shiftResponse = new ScheduleShiftResponse();
                 shiftResponse.setShiftID(shiftList.get(i).getId());
                 shiftResponse.setBonusRate(schedule1.getBonusRate());
-                shiftResponse.setDate(DateUtil.DateFormatterTime(schedule1.getDate()));
+                shiftResponse.setDate(schedule1.getDate());
                 shiftResponse.setScheduleID(shiftList.get(i).getScheduleID());
                 shiftResponse.setStart(shiftList.get(i).getStart().toString());
                 shiftResponse.setFinish(shiftList.get(i).getFinish().toString());
@@ -83,7 +84,7 @@ public class ShiftServiceImp implements ShiftService {
                 ScheduleShiftResponse dto = new ScheduleShiftResponse();
                 dto.setScheduleID(schedule.getId());
                 dto.setBonusRate(schedule.getBonusRate());
-                dto.setDate(DateUtil.DateFormatterTime(schedule.getDate()));
+                dto.setDate(schedule.getDate());
                 dto.setShiftID(shift.getId());
                 dto.setStart(shift.getStart().toString());
                 dto.setFinish(shift.getFinish().toString());
@@ -99,11 +100,17 @@ public class ShiftServiceImp implements ShiftService {
     }
 
     @Override
-    public List<Shift> getListShiftBySchedule(int scheduleID) throws Exception {
+    public List<Shift> getListShiftBySchedule(Date date) throws Exception {
         logger.info(Constant.BEGIN_SERVICE + "getListShiftBySchedule");
         try {
+            java.sql.Date sqlDate = new java.sql.Date(date.getTime());
             List<Shift> result = new ArrayList<>();
-            return shiftRepository.getAllShiftByScheduleID(scheduleID);
+            Schedule schedule = scheduleRepository.findByDate(sqlDate);
+            if(schedule == null){
+                throw new Exception(Message.SCHEDULE_NOT_FOUND);
+            }
+            result = shiftRepository.findAllByScheduleID(schedule.getId());
+            return result;
         }finally {
             logger.info(Constant.END_SERVICE + "getListShiftBySchedule");
         }

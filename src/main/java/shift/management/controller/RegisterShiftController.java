@@ -29,7 +29,7 @@ public class RegisterShiftController {
             return new ResponseEntity(registerShiftService.register(username, shiftID), HttpStatus.OK);
         }catch (Exception ex){
             logger.error(ex);
-            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity(ex.getMessage(), HttpStatus.OK);
         }finally {
             logger.info(Constant.END_CONTROLLER + "registerShift");
         }
@@ -44,7 +44,7 @@ public class RegisterShiftController {
             return new ResponseEntity(registerShiftService.listRequest(shiftID), HttpStatus.OK);
         }catch (Exception ex){
             logger.error(ex);
-            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity(ex.getMessage(), HttpStatus.OK);
         }finally {
             logger.info(Constant.END_CONTROLLER + "getListRequest");
         }
@@ -59,7 +59,7 @@ public class RegisterShiftController {
             return new ResponseEntity(registerShiftService.disapproveRequest(username, shiftID), HttpStatus.OK);
         }catch (Exception ex){
             logger.error(ex);
-            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity(ex.getMessage(), HttpStatus.OK);
         }finally {
             logger.info(Constant.END_CONTROLLER + "updateStatusRequestShift");
         }

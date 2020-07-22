@@ -86,4 +86,17 @@ public class UserServiceImp implements UserService {
         }
     }
 
+    @Override
+    public List<User> getListAccount() {
+        logger.info(Constant.BEGIN_SERVICE + "getListAccount");
+        try {
+            List<User> result = new ArrayList<>();
+            result =  userRepository.findAll();
+            return result;
+        }
+        finally {
+            logger.info(Constant.END_SERVICE + "getListAccount");
+        }
+    }
+
 }

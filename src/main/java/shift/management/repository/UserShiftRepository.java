@@ -13,5 +13,5 @@ public interface UserShiftRepository extends JpaRepository<UserShift, Integer> {
 
     UserShift findByUserIDAndShiftID(String username, int shiftID);
 
-    List<UserShift> findByShiftID(int shiftId);
+    List<UserShift> findAllByShiftID(int shiftId);
 }

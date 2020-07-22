@@ -11,4 +11,6 @@ public interface UserService {
 
     public List<User> searchByUsernameAndName(String keyword);
 
+    List<User> getListAccount();
+
 }
