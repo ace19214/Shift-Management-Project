@@ -83,7 +83,8 @@ public class UserController {
     }
 
     @GetMapping(URL.TOTAL_SALARY)
-    public ResponseEntity<?> getTotalSalary(@DateTimeFormat(pattern = "yyyy-MM-dd") Date fromDate,@DateTimeFormat(pattern = "yyyy-MM-dd") Date toDate, String username) {
+    public ResponseEntity<?> getTotalSalary(@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") Date fromDate,@RequestParam
+    @DateTimeFormat(pattern = "yyyy-MM-dd") Date toDate,@RequestParam String username) {
         User user = userService.getTotalSalary(fromDate, toDate, username);
         if (Objects.nonNull(user)) {
             return ResponseEntity.ok(user);
