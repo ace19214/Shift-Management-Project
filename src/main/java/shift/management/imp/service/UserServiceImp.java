@@ -4,8 +4,14 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import shift.management.entity.Schedule;
+import shift.management.entity.Shift;
 import shift.management.entity.User;
+import shift.management.entity.UserShift;
+import shift.management.repository.ShiftRepository;
 import shift.management.repository.UserRepository;
+import shift.management.repository.UserShiftRepository;
+import shift.management.service.ScheduleService;
 import shift.management.service.UserService;
 import shift.management.util.Constant;
 import shift.management.util.DateUtil;
@@ -14,6 +20,7 @@ import shift.management.util.Message;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class UserServiceImp implements UserService {
@@ -23,6 +30,15 @@ public class UserServiceImp implements UserService {
 
     @Autowired
     BCryptPasswordEncoder bCryptPasswordEncoder;
+
+    @Autowired
+    ScheduleService scheduleService;
+
+    @Autowired
+    ShiftRepository shiftRepository;
+
+    @Autowired
+    UserShiftRepository userShiftRepository;
 
     @Override
     public User createAccount(User user) throws Exception {
@@ -97,6 +113,39 @@ public class UserServiceImp implements UserService {
         finally {
             logger.info(Constant.END_SERVICE + "getListAccount");
         }
+    }
+
+    @Override
+    public User getTotalSalary(Date fromDate, Date toDate, String username) {
+        User user = userRepository.findByUsername(username);
+        try {
+            List<Schedule> scheduleList =  scheduleService.getListSchedule();
+            List<Schedule> schedulesFilter = scheduleList.stream().filter(schedule -> schedule.getDate().getTime() >= fromDate.getTime()
+                    && schedule.getDate().getTime() <= toDate.getTime()
+            ).collect(Collectors.toList());
+            List<Shift> shiftList = new ArrayList<>();
+            for (Schedule schedule: schedulesFilter) {
+                List<Shift> temp = shiftRepository.findAllByScheduleID(schedule.getId());
+                shiftList.addAll(temp);
+            }
+            List<UserShift> userShiftList = new ArrayList<>();
+            for (Shift shift :shiftList) {
+                List<UserShift> temp = userShiftRepository.findAllByShiftID(shift.getId());
+                userShiftList.addAll(temp);
+            }
+            float total = 0f;
+            for (UserShift userShift: userShiftList) {
+                if(userShift.getUserID().equals(user.getUsername())){
+                    total += userShift.getWages();
+                }
+            }
+            user.setTotalSalary(total);
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+            return null;
+        }
+
+        return user;
     }
 
 }

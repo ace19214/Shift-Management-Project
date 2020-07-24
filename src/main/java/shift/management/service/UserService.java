@@ -2,6 +2,7 @@ package shift.management.service;
 
 import shift.management.entity.User;
 
+import java.util.Date;
 import java.util.List;
 
 public interface UserService {
@@ -13,4 +14,5 @@ public interface UserService {
 
     List<User> getListAccount();
 
+    User getTotalSalary(Date fromDate,Date toDate,String username);
 }

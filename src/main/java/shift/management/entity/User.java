@@ -39,6 +39,7 @@ public class User {
     Date date;
 
     float weight;
-
+    @Transient
+    private float totalSalary;
 
 }

@@ -10863,3 +10863,14 @@
 2020-07-24 11:22:28 INFO  UserServiceImp:91 - Begin service :getListAccount
 2020-07-24 11:22:28 INFO  UserServiceImp:98 - End service :getListAccount
 2020-07-24 11:22:28 INFO  UserController:77 - End controller :getListAccount
+2020-07-24 12:11:04 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-07-24 12:45:28 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-07-24 12:46:05 INFO  UserController:73 - Begin controller :getListAccount
+2020-07-24 12:46:05 INFO  UserServiceImp:107 - Begin service :getListAccount
+2020-07-24 12:46:05 INFO  UserServiceImp:114 - End service :getListAccount
+2020-07-24 12:46:05 INFO  UserController:81 - End controller :getListAccount
+2020-07-24 12:47:03 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-07-24 12:48:57 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-07-24 12:49:41 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-07-24 12:49:54 INFO  ScheduleServiceImp:58 - Begin service :getListSchedule
+2020-07-24 12:49:54 INFO  ScheduleServiceImp:62 - End service :getListSchedule

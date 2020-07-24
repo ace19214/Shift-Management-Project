@@ -2,6 +2,7 @@ package shift.management.controller;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -9,6 +10,9 @@ import shift.management.entity.User;
 import shift.management.service.UserService;
 import shift.management.util.Constant;
 import shift.management.util.URL;
+
+import java.util.Date;
+import java.util.Objects;
 
 @RestController
 @RequestMapping(URL.API)
@@ -21,61 +25,70 @@ public class UserController {
 
     //create account
     @PostMapping(URL.CREATE_ACCOUNT)
-    public ResponseEntity createAccount (@RequestBody User user){
+    public ResponseEntity createAccount(@RequestBody User user) {
         logger.info(Constant.BEGIN_CONTROLLER + "createAccount");
         try {
 
             return new ResponseEntity(userService.createAccount(user), HttpStatus.OK);
-        }catch (Exception ex){
+        } catch (Exception ex) {
             logger.error(ex);
             return new ResponseEntity(ex.getMessage(), HttpStatus.OK);
-        }finally {
+        } finally {
             logger.info(Constant.END_CONTROLLER + "createAccount");
         }
     }
 
     //update account
     @PutMapping(URL.UPDATE_ACCOUNT)
-    public ResponseEntity updateAccount (@RequestBody User user){
+    public ResponseEntity updateAccount(@RequestBody User user) {
         logger.info(Constant.BEGIN_CONTROLLER + "updateAccount");
         try {
 
             return new ResponseEntity(userService.updateAccount(user), HttpStatus.OK);
-        }catch (Exception ex){
+        } catch (Exception ex) {
             logger.error(ex);
             return new ResponseEntity(ex.getMessage(), HttpStatus.OK);
-        }finally {
+        } finally {
             logger.info(Constant.END_CONTROLLER + "updateAccount");
         }
     }
 
     //search by username or name
     @GetMapping(URL.SEARCH_ACCOUNT)
-    public ResponseEntity searchByUsernameOrName (@RequestParam String keyword){
+    public ResponseEntity searchByUsernameOrName(@RequestParam String keyword) {
         logger.info(Constant.BEGIN_CONTROLLER + "searchByUsernameOrName");
         try {
 
             return new ResponseEntity(userService.searchByUsernameAndName(keyword), HttpStatus.OK);
-        }catch (Exception ex){
+        } catch (Exception ex) {
             logger.error(ex);
             return new ResponseEntity(ex.getMessage(), HttpStatus.OK);
-        }finally {
+        } finally {
             logger.info(Constant.END_CONTROLLER + "searchByUsernameOrName");
         }
     }
 
     @GetMapping(URL.LIST_ACCOUNT)
-    public ResponseEntity getListAccount (){
+    public ResponseEntity getListAccount() {
         logger.info(Constant.BEGIN_CONTROLLER + "getListAccount");
         try {
 
             return new ResponseEntity(userService.getListAccount(), HttpStatus.OK);
-        }catch (Exception ex){
+        } catch (Exception ex) {
             logger.error(ex);
             return new ResponseEntity(ex.getMessage(), HttpStatus.OK);
-        }finally {
+        } finally {
             logger.info(Constant.END_CONTROLLER + "getListAccount");
         }
     }
 
+    @GetMapping(URL.TOTAL_SALARY)
+    public ResponseEntity<?> getTotalSalary(@DateTimeFormat(pattern = "yyyy-MM-dd") Date fromDate,@DateTimeFormat(pattern = "yyyy-MM-dd") Date toDate, String username) {
+        User user = userService.getTotalSalary(fromDate, toDate, username);
+        if (Objects.nonNull(user)) {
+            return ResponseEntity.ok(user);
+        }else{
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+        }
+    }
 }
