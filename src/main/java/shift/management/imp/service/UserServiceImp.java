@@ -8,6 +8,7 @@ import shift.management.entity.Schedule;
 import shift.management.entity.Shift;
 import shift.management.entity.User;
 import shift.management.entity.UserShift;
+import shift.management.model.LoginRequest;
 import shift.management.repository.ShiftRepository;
 import shift.management.repository.UserRepository;
 import shift.management.repository.UserShiftRepository;
@@ -20,6 +21,7 @@ import shift.management.util.Message;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Service
@@ -55,6 +57,7 @@ public class UserServiceImp implements UserService {
                 user.setDate(DateUtil.convertUtilToSql(date));
                 user.setWeight(1);
                 user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+                user.setRole(user.getRole());
                 userRepository.save(user);
             }
             return user;
@@ -148,4 +151,23 @@ public class UserServiceImp implements UserService {
         return user;
     }
 
+    public User checkLogin(LoginRequest loginRequest){
+        User user = userRepository.findByUsername(loginRequest.getUsername());
+        if(Objects.nonNull(user)
+                && bCryptPasswordEncoder.matches(loginRequest.getPassword(),user.getPassword())
+                && !user.getRole().equals(Constant.MANAGER)){
+            return user;
+        }
+        return null;
+    }
+
+    public User checkManagerLogin(LoginRequest loginRequest){
+        User user = userRepository.findByUsername(loginRequest.getUsername());
+        if(Objects.nonNull(user)
+                && bCryptPasswordEncoder.matches(loginRequest.getPassword(),user.getPassword())
+                && user.getRole().equals(Constant.MANAGER)){
+            return user;
+        }
+        return null;
+    }
 }

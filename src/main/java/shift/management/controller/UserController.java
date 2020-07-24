@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import shift.management.entity.User;
+import shift.management.model.LoginRequest;
 import shift.management.service.UserService;
 import shift.management.util.Constant;
 import shift.management.util.URL;
@@ -91,5 +92,23 @@ public class UserController {
         }else{
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
         }
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<?> checkLogin(@RequestBody LoginRequest loginRequest){
+        User user = userService.checkLogin(loginRequest);
+        if(Objects.nonNull(user)){
+            return ResponseEntity.ok(user);
+        }
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+    }
+
+    @PostMapping("/manager-login")
+    public ResponseEntity<?> checkManagerLogin(@RequestBody LoginRequest loginRequest){
+        User user = userService.checkManagerLogin(loginRequest);
+        if(Objects.nonNull(user)){
+            return ResponseEntity.ok(user);
+        }
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
     }
 }

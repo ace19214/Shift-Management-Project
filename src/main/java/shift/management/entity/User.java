@@ -19,7 +19,7 @@ public class User {
     @Id
     String username;
 
-    @JsonIgnore
+//    @JsonIgnore
     String password;
 
     String name;

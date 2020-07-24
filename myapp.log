@@ -11053,3 +11053,13 @@
 2020-07-24 14:22:38 INFO  ShiftController:70 - End controller :getListShiftBySchedule
 2020-07-24 14:22:38 INFO  UserShiftServiceImp:199 - End service :getAllUserByShiftId
 2020-07-24 14:22:38 INFO  UserShiftController:108 - End controller :getListUserShift
+2020-07-24 22:54:19 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-07-24 22:58:35 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-07-24 23:09:59 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-07-24 23:10:35 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-07-24 23:14:41 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-07-24 23:15:11 INFO  UserController:30 - Begin controller :createAccount
+2020-07-24 23:15:11 INFO  UserServiceImp:47 - Begin service :createAccount
+2020-07-24 23:15:11 INFO  UserServiceImp:65 - End service :createAccount
+2020-07-24 23:15:11 INFO  UserController:38 - End controller :createAccount
+2020-07-24 23:17:30 DEBUG ShiftManagementApplication:33 - Starting Swagger
