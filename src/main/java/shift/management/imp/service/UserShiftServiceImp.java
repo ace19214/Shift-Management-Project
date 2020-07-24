@@ -42,7 +42,7 @@ public class UserShiftServiceImp implements UserShiftService{
 
 
     @Override
-    public boolean insertApproveShift(String username, int shiftID, int registerShiftID) throws Exception {
+    public UserShift insertApproveShift(String username, int shiftID, int registerShiftID) throws Exception {
         logger.info(Constant.BEGIN_SERVICE + "insertApproveShift");
         try {
             User user = userRepository.findByUsername(username);
@@ -69,7 +69,7 @@ public class UserShiftServiceImp implements UserShiftService{
             registerShift.setStatus(Constant.DISABLE);
             registerShiftRepository.save(registerShift);
 
-            return true;
+            return userShift;
 
         }finally {
             logger.info(Constant.END_SERVICE + "insertApproveShift");
