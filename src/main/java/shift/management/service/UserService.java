@@ -1,13 +1,14 @@
 package shift.management.service;
 
 import shift.management.entity.User;
+import shift.management.model.CreateAccountRequest;
 import shift.management.model.LoginRequest;
 
 import java.util.Date;
 import java.util.List;
 
 public interface UserService {
-    public User createAccount(User user) throws Exception;
+    public User createAccount(CreateAccountRequest user) throws Exception;
 
     public User updateAccount(User user) throws Exception;
 

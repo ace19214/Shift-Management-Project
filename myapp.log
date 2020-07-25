@@ -11063,3 +11063,12 @@
 2020-07-24 23:15:11 INFO  UserServiceImp:65 - End service :createAccount
 2020-07-24 23:15:11 INFO  UserController:38 - End controller :createAccount
 2020-07-24 23:17:30 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-07-25 20:23:29 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-07-25 20:23:54 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-07-25 20:24:04 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-07-25 20:34:22 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-07-25 20:47:59 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-07-25 20:48:39 INFO  UserController:31 - Begin controller :createAccount
+2020-07-25 20:48:39 INFO  UserServiceImp:43 - Begin service :createAccount
+2020-07-25 20:48:39 INFO  UserServiceImp:63 - End service :createAccount
+2020-07-25 20:48:39 INFO  UserController:39 - End controller :createAccount

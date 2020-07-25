@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import shift.management.entity.User;
+import shift.management.model.CreateAccountRequest;
 import shift.management.model.LoginRequest;
 import shift.management.service.UserService;
 import shift.management.util.Constant;
@@ -26,7 +27,7 @@ public class UserController {
 
     //create account
     @PostMapping(URL.CREATE_ACCOUNT)
-    public ResponseEntity createAccount(@RequestBody User user) {
+    public ResponseEntity createAccount(@RequestBody CreateAccountRequest user) {
         logger.info(Constant.BEGIN_CONTROLLER + "createAccount");
         try {
 

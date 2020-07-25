@@ -1,5 +1,6 @@
 package shift.management.imp.service;
 
+import lombok.AllArgsConstructor;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -8,6 +9,8 @@ import shift.management.entity.Schedule;
 import shift.management.entity.Shift;
 import shift.management.entity.User;
 import shift.management.entity.UserShift;
+import shift.management.mapper.UserMapper;
+import shift.management.model.CreateAccountRequest;
 import shift.management.model.LoginRequest;
 import shift.management.repository.ShiftRepository;
 import shift.management.repository.UserRepository;
@@ -25,33 +28,28 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Service
+@AllArgsConstructor
 public class UserServiceImp implements UserService {
     private static final Logger logger = Logger.getLogger(UserServiceImp.class);
-    @Autowired
-    UserRepository userRepository;
-
-    @Autowired
-    BCryptPasswordEncoder bCryptPasswordEncoder;
-
-    @Autowired
-    ScheduleService scheduleService;
-
-    @Autowired
-    ShiftRepository shiftRepository;
-
-    @Autowired
-    UserShiftRepository userShiftRepository;
+    private final UserRepository userRepository;
+    private final BCryptPasswordEncoder bCryptPasswordEncoder;
+    private final ScheduleService scheduleService;
+    private final ShiftRepository shiftRepository;
+    private final UserShiftRepository userShiftRepository;
+    private final UserMapper userMapper;
 
     @Override
-    public User createAccount(User user) throws Exception {
+    public User createAccount(CreateAccountRequest account) throws Exception {
         logger.info(Constant.BEGIN_SERVICE + "createAccount");
         try {
-            if(userRepository.findById(user.getUsername()).isPresent()){
+            User user = null;
+            if(userRepository.findById(account.getUsername()).isPresent()){
                 throw new Exception(Message.ACCOUNT_EXIST);
-            }else if(user.getRole().equals(Constant.MANAGER)){
+            }else if(account.getRole().equals(Constant.MANAGER)){
                 throw new Exception(Message.ROLE_INVALID);
             }
             else{
+                user = userMapper.requestToUser(account);
                 user.setStatus(Constant.ACTIVE);
                 Date date = new Date();
                 user.setDate(DateUtil.convertUtilToSql(date));
