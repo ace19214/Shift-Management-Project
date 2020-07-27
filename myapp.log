@@ -11072,3 +11072,169 @@
 2020-07-25 20:48:39 INFO  UserServiceImp:43 - Begin service :createAccount
 2020-07-25 20:48:39 INFO  UserServiceImp:63 - End service :createAccount
 2020-07-25 20:48:39 INFO  UserController:39 - End controller :createAccount
+2020-07-27 12:35:54 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-07-27 12:36:05 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-07-27 12:36:36 INFO  UserController:32 - Begin controller :createAccount
+2020-07-27 12:36:36 INFO  UserServiceImp:43 - Begin service :createAccount
+2020-07-27 12:36:36 INFO  UserServiceImp:63 - End service :createAccount
+2020-07-27 12:36:36 ERROR UserController:37 - org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2020-07-27 12:36:36 INFO  UserController:40 - End controller :createAccount
+2020-07-27 17:03:59 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-07-27 17:04:25 INFO  UserController:32 - Begin controller :createAccount
+2020-07-27 17:04:25 INFO  UserServiceImp:43 - Begin service :createAccount
+2020-07-27 17:04:25 INFO  UserServiceImp:63 - End service :createAccount
+2020-07-27 17:04:25 ERROR UserController:37 - org.springframework.dao.InvalidDataAccessResourceUsageException: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement
+2020-07-27 17:04:25 INFO  UserController:40 - End controller :createAccount
+2020-07-27 19:27:47 INFO  UserController:32 - Begin controller :createAccount
+2020-07-27 19:27:47 INFO  UserServiceImp:43 - Begin service :createAccount
+2020-07-27 19:27:47 INFO  UserServiceImp:63 - End service :createAccount
+2020-07-27 19:27:47 INFO  UserController:40 - End controller :createAccount
+2020-07-27 20:14:36 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-07-27 20:15:25 INFO  UserController:32 - Begin controller :createAccount
+2020-07-27 20:15:25 INFO  UserServiceImp:43 - Begin service :createAccount
+2020-07-27 20:15:25 INFO  UserServiceImp:63 - End service :createAccount
+2020-07-27 20:15:25 INFO  UserController:40 - End controller :createAccount
+2020-07-27 20:15:42 INFO  UserController:32 - Begin controller :createAccount
+2020-07-27 20:15:42 INFO  UserServiceImp:43 - Begin service :createAccount
+2020-07-27 20:15:42 INFO  UserServiceImp:63 - End service :createAccount
+2020-07-27 20:15:42 ERROR UserController:37 - java.lang.Exception: Account is exist
+2020-07-27 20:15:42 INFO  UserController:40 - End controller :createAccount
+2020-07-27 20:15:52 INFO  UserController:32 - Begin controller :createAccount
+2020-07-27 20:15:52 INFO  UserServiceImp:43 - Begin service :createAccount
+2020-07-27 20:15:52 INFO  UserServiceImp:63 - End service :createAccount
+2020-07-27 20:15:52 ERROR UserController:37 - java.lang.Exception: Role invalid
+2020-07-27 20:15:52 INFO  UserController:40 - End controller :createAccount
+2020-07-27 20:17:02 INFO  UserController:32 - Begin controller :createAccount
+2020-07-27 20:17:02 INFO  UserServiceImp:43 - Begin service :createAccount
+2020-07-27 20:17:03 INFO  UserServiceImp:63 - End service :createAccount
+2020-07-27 20:17:03 INFO  UserController:40 - End controller :createAccount
+2020-07-27 20:17:19 INFO  UserController:32 - Begin controller :createAccount
+2020-07-27 20:17:19 INFO  UserServiceImp:43 - Begin service :createAccount
+2020-07-27 20:17:19 INFO  UserServiceImp:63 - End service :createAccount
+2020-07-27 20:17:19 INFO  UserController:40 - End controller :createAccount
+2020-07-27 20:23:58 INFO  ShiftController:32 - Begin controller :createScheduleAndShift
+2020-07-27 20:23:58 INFO  ShiftServiceImp:38 - Begin service :createShift
+2020-07-27 20:23:58 INFO  ScheduleServiceImp:25 - Begin service :createSchedule
+2020-07-27 20:23:58 INFO  ScheduleServiceImp:35 - End service :createSchedule
+2020-07-27 20:23:58 INFO  ShiftServiceImp:63 - End service :createShift
+2020-07-27 20:23:58 ERROR ShiftController:37 - java.lang.IllegalArgumentException
+2020-07-27 20:23:58 INFO  ShiftController:40 - End controller :createScheduleAndShift
+2020-07-27 20:25:47 INFO  ShiftController:32 - Begin controller :createScheduleAndShift
+2020-07-27 20:25:47 INFO  ShiftServiceImp:38 - Begin service :createShift
+2020-07-27 20:25:47 INFO  ScheduleServiceImp:25 - Begin service :createSchedule
+2020-07-27 20:25:47 INFO  ScheduleServiceImp:35 - End service :createSchedule
+2020-07-27 20:25:47 INFO  ShiftServiceImp:63 - End service :createShift
+2020-07-27 20:25:47 ERROR ShiftController:37 - java.lang.Exception: Schedule is exist
+2020-07-27 20:25:47 INFO  ShiftController:40 - End controller :createScheduleAndShift
+2020-07-27 20:25:58 INFO  ShiftController:32 - Begin controller :createScheduleAndShift
+2020-07-27 20:25:58 INFO  ShiftServiceImp:38 - Begin service :createShift
+2020-07-27 20:25:58 INFO  ScheduleServiceImp:25 - Begin service :createSchedule
+2020-07-27 20:25:58 INFO  ScheduleServiceImp:35 - End service :createSchedule
+2020-07-27 20:25:58 INFO  ShiftServiceImp:63 - End service :createShift
+2020-07-27 20:25:58 ERROR ShiftController:37 - java.lang.IllegalArgumentException
+2020-07-27 20:25:58 INFO  ShiftController:40 - End controller :createScheduleAndShift
+2020-07-27 20:26:51 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-07-27 20:26:57 INFO  ShiftController:32 - Begin controller :createScheduleAndShift
+2020-07-27 20:26:57 INFO  ShiftServiceImp:38 - Begin service :createShift
+2020-07-27 20:26:57 INFO  ScheduleServiceImp:25 - Begin service :createSchedule
+2020-07-27 20:26:57 INFO  ScheduleServiceImp:35 - End service :createSchedule
+2020-07-27 20:26:57 INFO  ShiftServiceImp:63 - End service :createShift
+2020-07-27 20:26:57 ERROR ShiftController:37 - java.lang.IllegalArgumentException
+2020-07-27 20:26:57 INFO  ShiftController:40 - End controller :createScheduleAndShift
+2020-07-27 20:27:16 INFO  ShiftController:32 - Begin controller :createScheduleAndShift
+2020-07-27 20:27:16 INFO  ShiftServiceImp:38 - Begin service :createShift
+2020-07-27 20:27:16 INFO  ScheduleServiceImp:25 - Begin service :createSchedule
+2020-07-27 20:27:16 INFO  ScheduleServiceImp:35 - End service :createSchedule
+2020-07-27 20:27:16 INFO  ShiftServiceImp:63 - End service :createShift
+2020-07-27 20:27:16 ERROR ShiftController:37 - java.lang.Exception: Schedule is exist
+2020-07-27 20:27:16 INFO  ShiftController:40 - End controller :createScheduleAndShift
+2020-07-27 20:27:23 INFO  ShiftController:32 - Begin controller :createScheduleAndShift
+2020-07-27 20:27:23 INFO  ShiftServiceImp:38 - Begin service :createShift
+2020-07-27 20:27:53 INFO  ScheduleServiceImp:25 - Begin service :createSchedule
+2020-07-27 20:27:53 INFO  ScheduleServiceImp:35 - End service :createSchedule
+2020-07-27 20:29:04 INFO  ShiftServiceImp:63 - End service :createShift
+2020-07-27 20:29:04 ERROR ShiftController:37 - java.lang.Exception: Schedule is exist
+2020-07-27 20:29:04 INFO  ShiftController:40 - End controller :createScheduleAndShift
+2020-07-27 20:30:09 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-07-27 20:30:25 INFO  ShiftController:32 - Begin controller :createScheduleAndShift
+2020-07-27 20:30:25 INFO  ShiftServiceImp:38 - Begin service :createShift
+2020-07-27 20:30:25 INFO  ScheduleServiceImp:25 - Begin service :createSchedule
+2020-07-27 20:30:25 INFO  ScheduleServiceImp:35 - End service :createSchedule
+2020-07-27 20:30:25 INFO  ShiftServiceImp:63 - End service :createShift
+2020-07-27 20:30:25 ERROR ShiftController:37 - java.lang.IllegalArgumentException
+2020-07-27 20:30:25 INFO  ShiftController:40 - End controller :createScheduleAndShift
+2020-07-27 20:31:08 INFO  ShiftController:32 - Begin controller :createScheduleAndShift
+2020-07-27 20:31:08 INFO  ShiftServiceImp:38 - Begin service :createShift
+2020-07-27 20:31:10 INFO  ScheduleServiceImp:25 - Begin service :createSchedule
+2020-07-27 20:31:10 INFO  ScheduleServiceImp:35 - End service :createSchedule
+2020-07-27 20:31:51 INFO  ShiftServiceImp:63 - End service :createShift
+2020-07-27 20:31:51 ERROR ShiftController:37 - java.lang.IllegalArgumentException
+2020-07-27 20:31:51 INFO  ShiftController:40 - End controller :createScheduleAndShift
+2020-07-27 20:34:05 INFO  ShiftController:32 - Begin controller :createScheduleAndShift
+2020-07-27 20:34:05 INFO  ShiftServiceImp:38 - Begin service :createShift
+2020-07-27 20:34:09 INFO  ScheduleServiceImp:25 - Begin service :createSchedule
+2020-07-27 20:34:09 INFO  ScheduleServiceImp:35 - End service :createSchedule
+2020-07-27 20:34:13 INFO  ShiftServiceImp:63 - End service :createShift
+2020-07-27 20:34:13 ERROR ShiftController:37 - java.lang.IllegalArgumentException
+2020-07-27 20:34:13 INFO  ShiftController:40 - End controller :createScheduleAndShift
+2020-07-27 20:35:54 INFO  ShiftController:32 - Begin controller :createScheduleAndShift
+2020-07-27 20:35:54 INFO  ShiftServiceImp:38 - Begin service :createShift
+2020-07-27 20:35:56 INFO  ScheduleServiceImp:25 - Begin service :createSchedule
+2020-07-27 20:35:56 INFO  ScheduleServiceImp:35 - End service :createSchedule
+2020-07-27 20:35:56 INFO  ShiftServiceImp:63 - End service :createShift
+2020-07-27 20:35:56 INFO  ShiftController:40 - End controller :createScheduleAndShift
+2020-07-27 20:36:41 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-07-27 20:36:48 INFO  ShiftController:32 - Begin controller :createScheduleAndShift
+2020-07-27 20:36:48 INFO  ShiftServiceImp:38 - Begin service :createShift
+2020-07-27 20:36:48 INFO  ScheduleServiceImp:25 - Begin service :createSchedule
+2020-07-27 20:36:48 INFO  ScheduleServiceImp:35 - End service :createSchedule
+2020-07-27 20:36:48 INFO  ShiftServiceImp:63 - End service :createShift
+2020-07-27 20:36:48 INFO  ShiftController:40 - End controller :createScheduleAndShift
+2020-07-27 20:37:44 INFO  RegisterShiftController:26 - Begin controller :registerShift
+2020-07-27 20:37:44 INFO  RegisterShiftServiceImp:47 - Begin service :register
+2020-07-27 20:37:44 INFO  RegisterShiftServiceImp:86 - End service :register
+2020-07-27 20:37:44 INFO  RegisterShiftController:34 - End controller :registerShift
+2020-07-27 20:37:47 INFO  RegisterShiftController:26 - Begin controller :registerShift
+2020-07-27 20:37:47 INFO  RegisterShiftServiceImp:47 - Begin service :register
+2020-07-27 20:37:47 INFO  RegisterShiftServiceImp:86 - End service :register
+2020-07-27 20:37:47 INFO  RegisterShiftController:34 - End controller :registerShift
+2020-07-27 20:37:49 INFO  RegisterShiftController:26 - Begin controller :registerShift
+2020-07-27 20:37:49 INFO  RegisterShiftServiceImp:47 - Begin service :register
+2020-07-27 20:37:49 INFO  RegisterShiftServiceImp:86 - End service :register
+2020-07-27 20:37:49 INFO  RegisterShiftController:34 - End controller :registerShift
+2020-07-27 20:41:11 INFO  UserShiftController:28 - Begin controller :insertApproveRequest
+2020-07-27 20:41:11 INFO  UserShiftServiceImp:46 - Begin service :insertApproveShift
+2020-07-27 20:41:11 INFO  UserShiftServiceImp:75 - End service :insertApproveShift
+2020-07-27 20:41:11 ERROR UserShiftController:33 - java.lang.Exception: Role invalid
+2020-07-27 20:41:11 INFO  UserShiftController:36 - End controller :insertApproveRequest
+2020-07-27 20:42:43 INFO  UserShiftController:28 - Begin controller :insertApproveRequest
+2020-07-27 20:42:43 INFO  UserShiftServiceImp:46 - Begin service :insertApproveShift
+2020-07-27 20:42:43 INFO  UserShiftServiceImp:75 - End service :insertApproveShift
+2020-07-27 20:42:43 INFO  UserShiftController:36 - End controller :insertApproveRequest
+2020-07-27 20:43:15 INFO  UserShiftController:85 - Begin controller :takeAttendance2
+2020-07-27 20:43:15 INFO  UserShiftServiceImp:164 - Begin service :takeAttendance2
+2020-07-27 20:43:15 INFO  UserShiftServiceImp:174 - End service :takeAttendance2
+2020-07-27 20:43:15 INFO  UserShiftController:93 - End controller :takeAttendance2
+2020-07-27 20:49:35 DEBUG ShiftManagementApplication:33 - Starting Swagger
+2020-07-27 20:50:16 INFO  UserShiftController:43 - Begin controller :takeAttendance
+2020-07-27 20:50:16 INFO  UserShiftServiceImp:81 - Begin service :takeAttendance
+2020-07-27 20:50:16 INFO  UserShiftServiceImp:93 - End service :takeAttendance
+2020-07-27 20:50:16 ERROR UserShiftController:48 - java.lang.Exception: UserShift not found
+2020-07-27 20:50:16 INFO  UserShiftController:51 - End controller :takeAttendance
+2020-07-27 20:51:34 INFO  UserShiftController:28 - Begin controller :insertApproveRequest
+2020-07-27 20:51:34 INFO  UserShiftServiceImp:46 - Begin service :insertApproveShift
+2020-07-27 20:51:34 INFO  UserShiftServiceImp:75 - End service :insertApproveShift
+2020-07-27 20:51:34 INFO  UserShiftController:36 - End controller :insertApproveRequest
+2020-07-27 20:51:48 INFO  UserShiftController:43 - Begin controller :takeAttendance
+2020-07-27 20:51:48 INFO  UserShiftServiceImp:81 - Begin service :takeAttendance
+2020-07-27 20:51:48 INFO  UserShiftServiceImp:93 - End service :takeAttendance
+2020-07-27 20:51:48 INFO  UserShiftController:51 - End controller :takeAttendance
+2020-07-27 20:53:21 INFO  UserShiftController:58 - Begin controller :finishShiftAndComputeSalary
+2020-07-27 20:53:21 INFO  UserShiftServiceImp:99 - Begin service :finishShiftAndComputeSalary
+2020-07-27 20:53:21 INFO  UserShiftServiceImp:133 - End service :finishShiftAndComputeSalary
+2020-07-27 20:53:21 ERROR UserShiftController:62 - java.lang.Exception: UserShift not found
+2020-07-27 20:53:21 INFO  UserShiftController:65 - End controller :finishShiftAndComputeSalary
+2020-07-27 20:53:43 INFO  UserShiftController:58 - Begin controller :finishShiftAndComputeSalary
+2020-07-27 20:53:43 INFO  UserShiftServiceImp:99 - Begin service :finishShiftAndComputeSalary
+2020-07-27 20:53:43 INFO  UserShiftServiceImp:133 - End service :finishShiftAndComputeSalary
+2020-07-27 20:53:43 INFO  UserShiftController:65 - End controller :finishShiftAndComputeSalary
