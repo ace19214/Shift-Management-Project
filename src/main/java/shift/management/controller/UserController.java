@@ -14,6 +14,7 @@ import shift.management.util.Constant;
 import shift.management.util.URL;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
 @RestController
@@ -85,31 +86,48 @@ public class UserController {
     }
 
     @GetMapping(URL.TOTAL_SALARY)
-    public ResponseEntity<?> getTotalSalary(@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") Date fromDate,@RequestParam
-    @DateTimeFormat(pattern = "yyyy-MM-dd") Date toDate,@RequestParam String username) {
+    public ResponseEntity<?> getTotalSalary(@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") Date fromDate, @RequestParam
+    @DateTimeFormat(pattern = "yyyy-MM-dd") Date toDate, @RequestParam String username) {
         User user = userService.getTotalSalary(fromDate, toDate, username);
         if (Objects.nonNull(user)) {
             return ResponseEntity.ok(user);
-        }else{
+        } else {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
         }
     }
 
     @PostMapping("/login")
-    public ResponseEntity<?> checkLogin(@RequestBody LoginRequest loginRequest){
+    public ResponseEntity<?> checkLogin(@RequestBody LoginRequest loginRequest) {
         User user = userService.checkLogin(loginRequest);
-        if(Objects.nonNull(user)){
+        if (Objects.nonNull(user)) {
             return ResponseEntity.ok(user);
         }
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
     }
 
     @PostMapping("/manager-login")
-    public ResponseEntity<?> checkManagerLogin(@RequestBody LoginRequest loginRequest){
+    public ResponseEntity<?> checkManagerLogin(@RequestBody LoginRequest loginRequest) {
         User user = userService.checkManagerLogin(loginRequest);
-        if(Objects.nonNull(user)){
+        if (Objects.nonNull(user)) {
             return ResponseEntity.ok(user);
         }
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
     }
+
+    @GetMapping(URL.TOTAL_SALARY_USERS)
+    public ResponseEntity<?> getTotalSalaryUsers(@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") Date fromDate, @RequestParam
+    @DateTimeFormat(pattern = "yyyy-MM-dd") Date toDate) {
+        List<User> userList = userService.getListAccount();
+        int rs = 0;
+        if (Objects.nonNull(userList)) {
+            for (User user1 : userList) {
+                User user = userService.getTotalSalary(fromDate, toDate, user1.getUsername());
+                assert Objects.nonNull(user);
+                rs += user.getTotalSalary();
+            }
+            return ResponseEntity.ok(rs);
+        }
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+    }
 }
+

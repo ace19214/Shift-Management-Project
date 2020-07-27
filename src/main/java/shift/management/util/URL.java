@@ -11,6 +11,7 @@ public class URL {
     public static final String SEARCH_ACCOUNT = USER + "/search";
     public static final String LIST_ACCOUNT = USER + "/list-account";
     public static final String TOTAL_SALARY = USER + "/total-salary";
+    public static final String TOTAL_SALARY_USERS = USER + "/total-salary-users";
 
     //shift controller
     public static final String SHIFT = "/shift";
