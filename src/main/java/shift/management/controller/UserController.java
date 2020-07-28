@@ -101,18 +101,18 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<?> checkLogin(@RequestBody LoginRequest loginRequest){
+    public ResponseEntity<?> checkLogin(@RequestBody LoginRequest loginRequest) {
         User user = userService.checkLogin(loginRequest);
-        if(Objects.nonNull(user)){
+        if (Objects.nonNull(user)) {
             return ResponseEntity.ok(user);
         }
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
     }
 
     @PostMapping("/manager-login")
-    public ResponseEntity<?> checkManagerLogin(@RequestBody LoginRequest loginRequest){
+    public ResponseEntity<?> checkManagerLogin(@RequestBody LoginRequest loginRequest) {
         User user = userService.checkManagerLogin(loginRequest);
-        if(Objects.nonNull(user)){
+        if (Objects.nonNull(user)) {
             return ResponseEntity.ok(user);
         }
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
