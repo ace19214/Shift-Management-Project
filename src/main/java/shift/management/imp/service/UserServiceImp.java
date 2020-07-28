@@ -152,8 +152,7 @@ public class UserServiceImp implements UserService {
     public User checkLogin(LoginRequest loginRequest){
         User user = userRepository.findByUsername(loginRequest.getUsername());
         if(Objects.nonNull(user)
-                && bCryptPasswordEncoder.matches(loginRequest.getPassword(),user.getPassword())
-                && !user.getRole().equals(Constant.MANAGER)){
+                && bCryptPasswordEncoder.matches(loginRequest.getPassword(),user.getPassword())) {
             return user;
         }
         return null;
