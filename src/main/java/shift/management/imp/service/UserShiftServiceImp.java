@@ -102,10 +102,15 @@ public class UserShiftServiceImp implements UserShiftService{
             if(user == null){
                 throw new Exception(Message.ACCOUNT_NOT_FOUND);
             }
+            Shift shift = shiftRepository.findById(shiftID);
+            if(shift == null){
+                throw new Exception(Message.SHIFT_NOT_FOUND);
+            }
             UserShift userShift = userShiftRepository.findByUserIDAndShiftID(username, shiftID);
             if(userShift == null){
                 throw new Exception(Message.USER_SHIFT_NOT_FOUND);
             }
+            userShift.setStartWork(shift.getStart());
             userShift.setFinishWork(Time.valueOf(finishWork));
             Schedule schedule = scheduleRepository.findById(scheduleID);
             if(schedule == null){
@@ -114,10 +119,6 @@ public class UserShiftServiceImp implements UserShiftService{
             Salary salary = salaryRepository.findById(userShift.getSalaryID());
             if(salary == null){
                 throw new Exception(Message.SALARY_NOT_FOUND);
-            }
-            Shift shift = shiftRepository.findById(shiftID);
-            if(shift == null){
-                throw new Exception(Message.SHIFT_NOT_FOUND);
             }
             int hour = shift.getFinish().getHours() - shift.getStart().getHours();
             int minutes = shift.getFinish().getMinutes() - shift.getStart().getMinutes();

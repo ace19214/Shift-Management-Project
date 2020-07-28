@@ -14,8 +14,4 @@ public class ScheduleShiftResponse {
     private String start;
     private String finish;
     private int slot;
-
-
-
-
 }

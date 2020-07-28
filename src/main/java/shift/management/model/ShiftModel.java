@@ -12,6 +12,4 @@ public class ShiftModel {
     private int slot;
     private float bonusRate;
     private Date date;
-
-
 }
